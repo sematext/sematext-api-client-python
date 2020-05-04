@@ -1,4 +1,4 @@
-# swagger_client.MetricsApi
+# stcloud.MetricsApi
 
 All URIs are relative to *https://localhost*
 
@@ -21,20 +21,20 @@ Default value of interval is 5m
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MetricsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.MetricsApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
-request_body = swagger_client.DataSeriesRequest() # DataSeriesRequest | Metric data points request
+request_body = stcloud.DataSeriesRequest() # DataSeriesRequest | Metric data points request
 
 try:
     # Get metrics data points for an app
@@ -77,20 +77,20 @@ Default value of interval is 5m
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MetricsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.MetricsApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
-request_body = swagger_client.DataSeriesRequest() # DataSeriesRequest | Metric filters request
+request_body = stcloud.DataSeriesRequest() # DataSeriesRequest | Metric filters request
 
 try:
     # Get metrics filters and their values for an app
@@ -131,18 +131,18 @@ Get metrics keys for an app
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MetricsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.MetricsApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
 
 try:
@@ -183,18 +183,18 @@ Get metrics info for an app
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MetricsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.MetricsApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
 
 try:

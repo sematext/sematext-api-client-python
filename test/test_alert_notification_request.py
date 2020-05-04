@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.alert_notification_request import AlertNotificationRequest  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.alert_notification_request import AlertNotificationRequest  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestAlertNotificationRequest(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestAlertNotificationRequest(unittest.TestCase):
     def testAlertNotificationRequest(self):
         """Test AlertNotificationRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.alert_notification_request.AlertNotificationRequest()  # noqa: E501
+        # model = stcloud.models.alert_notification_request.AlertNotificationRequest()  # noqa: E501
         pass
 
 

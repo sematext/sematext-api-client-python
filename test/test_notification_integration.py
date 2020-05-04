@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.notification_integration import NotificationIntegration  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.notification_integration import NotificationIntegration  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestNotificationIntegration(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestNotificationIntegration(unittest.TestCase):
     def testNotificationIntegration(self):
         """Test NotificationIntegration"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.notification_integration.NotificationIntegration()  # noqa: E501
+        # model = stcloud.models.notification_integration.NotificationIntegration()  # noqa: E501
         pass
 
 

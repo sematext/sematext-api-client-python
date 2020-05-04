@@ -1,4 +1,4 @@
-# swagger_client.ResetPasswordApi
+# stcloud.ResetPasswordApi
 
 All URIs are relative to *https://localhost*
 
@@ -16,19 +16,19 @@ Reset Password
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ResetPasswordApi(swagger_client.ApiClient(configuration))
-dto = swagger_client.UserInfo() # UserInfo | dto
+api_instance = stcloud.ResetPasswordApi(stcloud.ApiClient(configuration))
+dto = stcloud.UserInfo() # UserInfo | dto
 
 try:
     # Reset Password

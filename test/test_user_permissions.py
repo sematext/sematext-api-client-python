@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.user_permissions import UserPermissions  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.user_permissions import UserPermissions  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestUserPermissions(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestUserPermissions(unittest.TestCase):
     def testUserPermissions(self):
         """Test UserPermissions"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.user_permissions.UserPermissions()  # noqa: E501
+        # model = stcloud.models.user_permissions.UserPermissions()  # noqa: E501
         pass
 
 

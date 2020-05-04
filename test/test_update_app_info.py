@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.update_app_info import UpdateAppInfo  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.update_app_info import UpdateAppInfo  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestUpdateAppInfo(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestUpdateAppInfo(unittest.TestCase):
     def testUpdateAppInfo(self):
         """Test UpdateAppInfo"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.update_app_info.UpdateAppInfo()  # noqa: E501
+        # model = stcloud.models.update_app_info.UpdateAppInfo()  # noqa: E501
         pass
 
 

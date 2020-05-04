@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.report_info import ReportInfo  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.report_info import ReportInfo  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestReportInfo(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestReportInfo(unittest.TestCase):
     def testReportInfo(self):
         """Test ReportInfo"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.report_info.ReportInfo()  # noqa: E501
+        # model = stcloud.models.report_info.ReportInfo()  # noqa: E501
         pass
 
 

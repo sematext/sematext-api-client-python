@@ -1,4 +1,4 @@
-# swagger_client.AlertNotificationsApi
+# stcloud.AlertNotificationsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,20 +19,20 @@ Default value of interval is 1d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AlertNotificationsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AlertNotificationsApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
-time_interval = swagger_client.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
+time_interval = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
 
 try:
     # Get alert notifications for an app
@@ -75,19 +75,19 @@ Default value of interval is 1d
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AlertNotificationsApi(swagger_client.ApiClient(configuration))
-time_interval = swagger_client.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
+api_instance = stcloud.AlertNotificationsApi(stcloud.ApiClient(configuration))
+time_interval = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
 
 try:
     # Get alert notifications for a user

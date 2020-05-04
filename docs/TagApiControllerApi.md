@@ -1,4 +1,4 @@
-# swagger_client.TagApiControllerApi
+# stcloud.TagApiControllerApi
 
 All URIs are relative to *https://localhost*
 
@@ -18,18 +18,18 @@ Gets tag names for the given application identifiers appearing in the given time
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TagApiControllerApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.TagApiControllerApi(stcloud.ApiClient(configuration))
 app_ids = 'app_ids_example' # str | appIds
 _from = 789 # int | from (optional)
 to = 789 # int | to (optional)
@@ -82,18 +82,18 @@ Gets values for specified tags for the given application identifiers appearing i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TagApiControllerApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.TagApiControllerApi(stcloud.ApiClient(configuration))
 app_ids = 'app_ids_example' # str | appIds
 tag = ['tag_example'] # list[str] | tag
 _from = 789 # int | from (optional)
@@ -148,18 +148,18 @@ Gets values for specified tags for the given application identifiers appearing i
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TagApiControllerApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.TagApiControllerApi(stcloud.ApiClient(configuration))
 app_ids = 'app_ids_example' # str | appIds
 tag = ['tag_example'] # list[str] | tag
 _from = 789 # int | from (optional)

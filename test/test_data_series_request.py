@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.data_series_request import DataSeriesRequest  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.data_series_request import DataSeriesRequest  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestDataSeriesRequest(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestDataSeriesRequest(unittest.TestCase):
     def testDataSeriesRequest(self):
         """Test DataSeriesRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.data_series_request.DataSeriesRequest()  # noqa: E501
+        # model = stcloud.models.data_series_request.DataSeriesRequest()  # noqa: E501
         pass
 
 

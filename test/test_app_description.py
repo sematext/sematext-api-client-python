@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.app_description import AppDescription  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.app_description import AppDescription  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestAppDescription(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestAppDescription(unittest.TestCase):
     def testAppDescription(self):
         """Test AppDescription"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.app_description.AppDescription()  # noqa: E501
+        # model = stcloud.models.app_description.AppDescription()  # noqa: E501
         pass
 
 

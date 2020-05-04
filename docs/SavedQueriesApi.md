@@ -1,4 +1,4 @@
-# swagger_client.SavedQueriesApi
+# stcloud.SavedQueriesApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,18 +19,18 @@ Delete saved query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SavedQueriesApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.SavedQueriesApi(stcloud.ApiClient(configuration))
 updateable_query_id = 789 # int | updateableQueryId
 
 try:
@@ -71,18 +71,18 @@ Get saved queries for an app
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SavedQueriesApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.SavedQueriesApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
 
 try:
@@ -123,19 +123,19 @@ Create saved query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SavedQueriesApi(swagger_client.ApiClient(configuration))
-saved_query_dto = swagger_client.SavedQuery() # SavedQuery | savedQueryDto
+api_instance = stcloud.SavedQueriesApi(stcloud.ApiClient(configuration))
+saved_query_dto = stcloud.SavedQuery() # SavedQuery | savedQueryDto
 
 try:
     # Create saved query
@@ -175,19 +175,19 @@ Update saved query
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SavedQueriesApi(swagger_client.ApiClient(configuration))
-saved_query_dto = swagger_client.SavedQuery() # SavedQuery | savedQueryDto
+api_instance = stcloud.SavedQueriesApi(stcloud.ApiClient(configuration))
+saved_query_dto = stcloud.SavedQuery() # SavedQuery | savedQueryDto
 updateable_query_id = 789 # int | updateableQueryId
 
 try:

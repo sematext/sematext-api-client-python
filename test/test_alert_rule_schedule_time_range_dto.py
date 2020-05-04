@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.alert_rule_schedule_time_range_dto import AlertRuleScheduleTimeRangeDto  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.alert_rule_schedule_time_range_dto import AlertRuleScheduleTimeRangeDto  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestAlertRuleScheduleTimeRangeDto(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestAlertRuleScheduleTimeRangeDto(unittest.TestCase):
     def testAlertRuleScheduleTimeRangeDto(self):
         """Test AlertRuleScheduleTimeRangeDto"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.alert_rule_schedule_time_range_dto.AlertRuleScheduleTimeRangeDto()  # noqa: E501
+        # model = stcloud.models.alert_rule_schedule_time_range_dto.AlertRuleScheduleTimeRangeDto()  # noqa: E501
         pass
 
 

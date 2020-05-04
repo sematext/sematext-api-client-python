@@ -1,4 +1,4 @@
-# swagger_client.MonitoringAppApi
+# stcloud.MonitoringAppApi
 
 All URIs are relative to *https://localhost*
 
@@ -16,19 +16,19 @@ Create Monitoring App
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MonitoringAppApi(swagger_client.ApiClient(configuration))
-application_details = swagger_client.CreateAppInfo() # CreateAppInfo | Details of the application to be created
+api_instance = stcloud.MonitoringAppApi(stcloud.ApiClient(configuration))
+application_details = stcloud.CreateAppInfo() # CreateAppInfo | Details of the application to be created
 
 try:
     # Create Monitoring App

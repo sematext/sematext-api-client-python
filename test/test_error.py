@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.error import Error  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.error import Error  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestError(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestError(unittest.TestCase):
     def testError(self):
         """Test Error"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.error.Error()  # noqa: E501
+        # model = stcloud.models.error.Error()  # noqa: E501
         pass
 
 

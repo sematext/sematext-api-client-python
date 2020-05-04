@@ -13,8 +13,8 @@
 
 from setuptools import setup, find_packages  # noqa: H301
 
-NAME = "swagger-client"
-VERSION = "1.0.0"
+NAME = "sematext-api-client-python"
+VERSION = "0.1.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -35,7 +35,7 @@ setup(
     version=VERSION,
     description="Sematext Cloud API",
     author_email="",
-    url="",
+    url="unsubmitted",
     keywords=["Swagger", "Sematext Cloud API"],
     install_requires=REQUIRES,
     packages=find_packages(),

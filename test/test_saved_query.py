@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.saved_query import SavedQuery  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.models.saved_query import SavedQuery  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestSavedQuery(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestSavedQuery(unittest.TestCase):
     def testSavedQuery(self):
         """Test SavedQuery"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.saved_query.SavedQuery()  # noqa: E501
+        # model = stcloud.models.saved_query.SavedQuery()  # noqa: E501
         pass
 
 

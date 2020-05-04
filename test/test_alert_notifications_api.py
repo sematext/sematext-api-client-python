@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.alert_notifications_api import AlertNotificationsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.api.alert_notifications_api import AlertNotificationsApi  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestAlertNotificationsApi(unittest.TestCase):
     """AlertNotificationsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.alert_notifications_api.AlertNotificationsApi()  # noqa: E501
+        self.api = stcloud.api.alert_notifications_api.AlertNotificationsApi()  # noqa: E501
 
     def tearDown(self):
         pass

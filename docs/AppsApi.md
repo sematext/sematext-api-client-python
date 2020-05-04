@@ -1,4 +1,4 @@
-# swagger_client.AppsApi
+# stcloud.AppsApi
 
 All URIs are relative to *https://localhost*
 
@@ -22,18 +22,18 @@ Get all App types supported for the account identified with apiKey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 
 try:
     # Get all App types supported for the account identified with apiKey
@@ -70,18 +70,18 @@ Gets defails for one particular App
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 any_state_app_id = 789 # int | anyStateAppId
 
 try:
@@ -122,19 +122,19 @@ Invite guests to an app
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
-invitation = swagger_client.Invitation() # Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
+invitation = stcloud.Invitation() # Invitation | For `app` and `apps` fields only `id` needs to be populated.Other fields can be left empty or with default values
 
 try:
     # Invite guests to an app
@@ -174,18 +174,18 @@ Get all users of apps accessible to this account
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 
 try:
     # Get all users of apps accessible to this account
@@ -222,18 +222,18 @@ Get all apps accessible by account identified with apiKey
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 
 try:
     # Get all apps accessible by account identified with apiKey
@@ -272,20 +272,20 @@ App can be in any state
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 any_state_app_id = 789 # int | App Id
-update_details = swagger_client.AppDescription() # AppDescription | Update Details (optional)
+update_details = stcloud.AppDescription() # AppDescription | Update Details (optional)
 
 try:
     # Update description of the app
@@ -328,19 +328,19 @@ App can be in any state
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: api_key
-configuration = swagger_client.Configuration()
+configuration = stcloud.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.AppsApi(swagger_client.ApiClient(configuration))
-dto = swagger_client.UpdateAppInfo() # UpdateAppInfo | dto
+api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
+dto = stcloud.UpdateAppInfo() # UpdateAppInfo | dto
 any_state_app_id = 789 # int | App Id
 
 try:

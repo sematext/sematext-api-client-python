@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.aws_settings_controller_api import AwsSettingsControllerApi  # noqa: E501
-from swagger_client.rest import ApiException
+import stcloud
+from stcloud.api.aws_settings_controller_api import AwsSettingsControllerApi  # noqa: E501
+from stcloud.rest import ApiException
 
 
 class TestAwsSettingsControllerApi(unittest.TestCase):
     """AwsSettingsControllerApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.aws_settings_controller_api.AwsSettingsControllerApi()  # noqa: E501
+        self.api = stcloud.api.aws_settings_controller_api.AwsSettingsControllerApi()  # noqa: E501
 
     def tearDown(self):
         pass
