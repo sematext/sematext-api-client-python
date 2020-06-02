@@ -1,7 +1,6 @@
 # Sematext Cloud - API Client - sematext-api-python
 
 This client code talks to [Sematext Cloud API](https://sematext.com/cloud/) providing a way to automate setup of solution monitoring.<br>
-It's primary purpose is as a client module supporting [Sematext Terraform Provider](https://github.com/sematext/terraform-provider-sematext)
 <br><br>
 
 Further information and API browsing refer to the [Sematext Cloud API web page](https://sematext.com/docs/api/) 
@@ -26,13 +25,19 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/sematext/sematext-api-client-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/sematext-api-client-python.git`)
 
 Then import the package:
 ```python
 import stcloud 
+```
+
+### Testing
+
+```bash
+python -m unittest discover
 ```
 
 ### Setuptools
