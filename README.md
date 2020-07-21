@@ -58,7 +58,7 @@ This client code requires a Sematext API Access token to function. You can find 
 
 Python 2.7 and 3.4+
 
-## Installation & Usage
+## Installation
 ### pip install
 
 If the python package is hosted on Github, you can install directly from Github
