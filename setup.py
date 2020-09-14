@@ -10,7 +10,7 @@
 from setuptools import setup, find_packages  # mypy: disable=W0611 # noqa:
 
 NAME = "sematext-cloud-client"
-VERSION = "0.1.5"
+VERSION = "0.1.6"
 # To install the library, run the following
 #
 # python setup.py install
