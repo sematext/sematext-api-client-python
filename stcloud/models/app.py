@@ -53,11 +53,15 @@ class App(object):
         'payment_method_id': 'int',
         'plan': 'Plan',
         'prepaid_account': 'bool',
+        'read_token': 'str',
+        'read_write_token': 'str',
+        'registration_date': 'int',
         'status': 'str',
         'token': 'str',
         'trial_end_date': 'int',
         'url_group_limit': 'int',
-        'user_roles': 'list[UserRole]'
+        'user_roles': 'list[UserRole]',
+        'write_token': 'str'
     }
 
     attribute_map = {
@@ -83,14 +87,18 @@ class App(object):
         'payment_method_id': 'paymentMethodId',
         'plan': 'plan',
         'prepaid_account': 'prepaidAccount',
+        'read_token': 'readToken',
+        'read_write_token': 'readWriteToken',
+        'registration_date': 'registrationDate',
         'status': 'status',
         'token': 'token',
         'trial_end_date': 'trialEndDate',
         'url_group_limit': 'urlGroupLimit',
-        'user_roles': 'userRoles'
+        'user_roles': 'userRoles',
+        'write_token': 'writeToken'
     }
 
-    def __init__(self, ajax_threshold=None, app_type=None, app_type_id=None, creator_email=None, credit_card_expiry=None, credit_card_number=None, description=None, display_status=None, first_data_saved_date=None, id=None, integration=None, last_data_received_date=None, last_data_saved_date=None, logged_in_user_app_role=None, monthly_invoice_account=None, name=None, owner_email=None, owning_organization=None, page_load_threshold=None, payment_method_id=None, plan=None, prepaid_account=None, status=None, token=None, trial_end_date=None, url_group_limit=None, user_roles=None):  # noqa: E501
+    def __init__(self, ajax_threshold=None, app_type=None, app_type_id=None, creator_email=None, credit_card_expiry=None, credit_card_number=None, description=None, display_status=None, first_data_saved_date=None, id=None, integration=None, last_data_received_date=None, last_data_saved_date=None, logged_in_user_app_role=None, monthly_invoice_account=None, name=None, owner_email=None, owning_organization=None, page_load_threshold=None, payment_method_id=None, plan=None, prepaid_account=None, read_token=None, read_write_token=None, registration_date=None, status=None, token=None, trial_end_date=None, url_group_limit=None, user_roles=None, write_token=None):  # noqa: E501
         """App - a model defined in Swagger"""  # noqa: E501
 
         self._ajax_threshold = None
@@ -115,11 +123,15 @@ class App(object):
         self._payment_method_id = None
         self._plan = None
         self._prepaid_account = None
+        self._read_token = None
+        self._read_write_token = None
+        self._registration_date = None
         self._status = None
         self._token = None
         self._trial_end_date = None
         self._url_group_limit = None
         self._user_roles = None
+        self._write_token = None
         self.discriminator = None
 
         if ajax_threshold is not None:
@@ -166,6 +178,12 @@ class App(object):
             self.plan = plan
         if prepaid_account is not None:
             self.prepaid_account = prepaid_account
+        if read_token is not None:
+            self.read_token = read_token
+        if read_write_token is not None:
+            self.read_write_token = read_write_token
+        if registration_date is not None:
+            self.registration_date = registration_date
         if status is not None:
             self.status = status
         if token is not None:
@@ -176,6 +194,8 @@ class App(object):
             self.url_group_limit = url_group_limit
         if user_roles is not None:
             self.user_roles = user_roles
+        if write_token is not None:
+            self.write_token = write_token
 
     @property
     def ajax_threshold(self):
@@ -640,6 +660,69 @@ class App(object):
         self._prepaid_account = prepaid_account
 
     @property
+    def read_token(self):
+        """Gets the read_token of this App.  # noqa: E501
+
+
+        :return: The read_token of this App.  # noqa: E501
+        :rtype: str
+        """
+        return self._read_token
+
+    @read_token.setter
+    def read_token(self, read_token):
+        """Sets the read_token of this App.
+
+
+        :param read_token: The read_token of this App.  # noqa: E501
+        :type: str
+        """
+
+        self._read_token = read_token
+
+    @property
+    def read_write_token(self):
+        """Gets the read_write_token of this App.  # noqa: E501
+
+
+        :return: The read_write_token of this App.  # noqa: E501
+        :rtype: str
+        """
+        return self._read_write_token
+
+    @read_write_token.setter
+    def read_write_token(self, read_write_token):
+        """Sets the read_write_token of this App.
+
+
+        :param read_write_token: The read_write_token of this App.  # noqa: E501
+        :type: str
+        """
+
+        self._read_write_token = read_write_token
+
+    @property
+    def registration_date(self):
+        """Gets the registration_date of this App.  # noqa: E501
+
+
+        :return: The registration_date of this App.  # noqa: E501
+        :rtype: int
+        """
+        return self._registration_date
+
+    @registration_date.setter
+    def registration_date(self, registration_date):
+        """Sets the registration_date of this App.
+
+
+        :param registration_date: The registration_date of this App.  # noqa: E501
+        :type: int
+        """
+
+        self._registration_date = registration_date
+
+    @property
     def status(self):
         """Gets the status of this App.  # noqa: E501
 
@@ -743,6 +826,27 @@ class App(object):
         """
 
         self._user_roles = user_roles
+
+    @property
+    def write_token(self):
+        """Gets the write_token of this App.  # noqa: E501
+
+
+        :return: The write_token of this App.  # noqa: E501
+        :rtype: str
+        """
+        return self._write_token
+
+    @write_token.setter
+    def write_token(self, write_token):
+        """Sets the write_token of this App.
+
+
+        :param write_token: The write_token of this App.  # noqa: E501
+        :type: str
+        """
+
+        self._write_token = write_token
 
     def to_dict(self):
         """Returns the model properties as a dict"""

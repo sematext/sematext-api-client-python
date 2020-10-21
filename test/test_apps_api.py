@@ -29,6 +29,13 @@ class TestAppsApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_delete_using_delete(self):
+        """Test case for delete_using_delete
+
+        delete  # noqa: E501
+        """
+        pass
+
     def test_get_app_types_using_get(self):
         """Test case for get_app_types_using_get
 
@@ -71,8 +78,8 @@ class TestAppsApi(unittest.TestCase):
         """
         pass
 
-    def test_update_using_put1(self):
-        """Test case for update_using_put1
+    def test_update_using_put2(self):
+        """Test case for update_using_put2
 
         Update app  # noqa: E501
         """

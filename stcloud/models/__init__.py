@@ -27,6 +27,7 @@ from stcloud.models.basic_organization_dto import BasicOrganizationDto
 from stcloud.models.billing_info import BillingInfo
 from stcloud.models.cloud_watch_settings import CloudWatchSettings
 from stcloud.models.create_app_info import CreateAppInfo
+from stcloud.models.create_token_dto import CreateTokenDto
 from stcloud.models.data_series_filter import DataSeriesFilter
 from stcloud.models.data_series_request import DataSeriesRequest
 from stcloud.models.error import Error
@@ -38,7 +39,11 @@ from stcloud.models.plan import Plan
 from stcloud.models.report_info import ReportInfo
 from stcloud.models.saved_query import SavedQuery
 from stcloud.models.service_integration import ServiceIntegration
+from stcloud.models.subscription_dashboard_dto import SubscriptionDashboardDto
+from stcloud.models.subscription_dto import SubscriptionDto
 from stcloud.models.update_app_info import UpdateAppInfo
+from stcloud.models.update_subscription_dto import UpdateSubscriptionDto
+from stcloud.models.update_token_dto import UpdateTokenDto
 from stcloud.models.user_info import UserInfo
 from stcloud.models.user_permissions import UserPermissions
 from stcloud.models.user_role import UserRole
