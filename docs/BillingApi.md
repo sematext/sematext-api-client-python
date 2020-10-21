@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_detailed_invoice_using_get**](BillingApi.md#get_detailed_invoice_using_get) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details
-[**list_available_plans_using_get**](BillingApi.md#list_available_plans_using_get) | **GET** /users-web/api/v3/billing/availablePlans | Get available plans
-[**update_plan_using_put**](BillingApi.md#update_plan_using_put) | **PUT** /users-web/api/v3/billing/info/{appId} | Update plan for an app
+| Method                                                                             | HTTP request                                                       | Description            |
+| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
+| [**get_detailed_invoice_using_get**](BillingApi.md#get_detailed_invoice_using_get) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**list_available_plans_using_get**](BillingApi.md#list_available_plans_using_get) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**update_plan_using_put**](BillingApi.md#update_plan_using_put)                   | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 
 # **get_detailed_invoice_using_get**
@@ -44,11 +44,11 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **service** | **str**| service | 
- **year** | **int**| year | 
- **month** | **int**| month | 
+| Name        | Type    | Description | Notes |
+| ----------- | ------- | ----------- | ----- |
+| **service** | **str** | service     |
+| **year**    | **int** | year        |
+| **month**   | **int** | month       |
 
 ### Return type
 
@@ -99,10 +99,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **integration_id** | **int**| integrationId | [optional] 
- **app_type** | **str**| appType | [optional] 
+| Name               | Type    | Description   | Notes      |
+| ------------------ | ------- | ------------- | ---------- |
+| **integration_id** | **int** | integrationId | [optional] |
+| **app_type**       | **str** | appType       | [optional] |
 
 ### Return type
 
@@ -153,10 +153,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId | 
- **dto** | [**BillingInfo**](BillingInfo.md)| dto | 
+| Name       | Type                              | Description | Notes |
+| ---------- | --------------------------------- | ----------- | ----- |
+| **app_id** | **int**                           | appId       |
+| **dto**    | [**BillingInfo**](BillingInfo.md) | dto         |
 
 ### Return type
 
@@ -172,4 +172,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

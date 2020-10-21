@@ -1,20 +1,20 @@
-# stcloud.AlertsApi
+# stcloud.TokensApiControllerApi
 
 All URIs are relative to *https://localhost*
 
-| Method                                                                                  | HTTP request                                                 | Description                |
-| --------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
-| [**create_alert_using_post**](AlertsApi.md#create_alert_using_post)                     | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
-| [**delete_alert_rule_using_delete**](AlertsApi.md#delete_alert_rule_using_delete)       | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
-| [**disable_alert_rule_using_put**](AlertsApi.md#disable_alert_rule_using_put)           | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
-| [**enable_alert_rule_using_put**](AlertsApi.md#enable_alert_rule_using_put)             | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
-| [**get_alert_rules_for_app_using_get**](AlertsApi.md#get_alert_rules_for_app_using_get) | **GET** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
+| Method                                                                     | HTTP request                                                        | Description                       |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
+| [**create_app_token**](TokensApiControllerApi.md#create_app_token)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token              |
+| [**delete_app_token1**](TokensApiControllerApi.md#delete_app_token1)       | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                  |
+| [**get_app_tokens1**](TokensApiControllerApi.md#get_app_tokens1)           | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens          |
+| [**regenerate_app_token**](TokensApiControllerApi.md#regenerate_app_token) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)             |
+| [**update_app_token**](TokensApiControllerApi.md#update_app_token)         | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable) |
 
 
-# **create_alert_using_post**
-> GenericApiResponse create_alert_using_post(dto)
+# **create_app_token**
+> GenericApiResponse create_app_token(app_id, dto)
 
-Create alert rule
+Create new app token
 
 ### Example
 ```python
@@ -31,22 +31,24 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
-dto = stcloud.AlertRule() # AlertRule | dto
+api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+app_id = 789 # int | appId
+dto = stcloud.CreateTokenDto() # CreateTokenDto | dto
 
 try:
-    # Create alert rule
-    api_response = api_instance.create_alert_using_post(dto)
+    # Create new app token
+    api_response = api_instance.create_app_token(app_id, dto)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->create_alert_using_post: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->create_app_token: %s\n" % e)
 ```
 
 ### Parameters
 
-| Name    | Type                          | Description | Notes |
-| ------- | ----------------------------- | ----------- | ----- |
-| **dto** | [**AlertRule**](AlertRule.md) | dto         |
+| Name       | Type                                    | Description | Notes |
+| ---------- | --------------------------------------- | ----------- | ----- |
+| **app_id** | **int**                                 | appId       |
+| **dto**    | [**CreateTokenDto**](CreateTokenDto.md) | dto         |
 
 ### Return type
 
@@ -63,10 +65,10 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_alert_rule_using_delete**
-> GenericApiResponse delete_alert_rule_using_delete(updateable_alert_id)
+# **delete_app_token1**
+> GenericApiResponse delete_app_token1(app_id, token_id)
 
-Delete alert rule
+Delete app token
 
 ### Example
 ```python
@@ -83,22 +85,24 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
-updateable_alert_id = 789 # int | updateableAlertId
+api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+app_id = 789 # int | appId
+token_id = 789 # int | tokenId
 
 try:
-    # Delete alert rule
-    api_response = api_instance.delete_alert_rule_using_delete(updateable_alert_id)
+    # Delete app token
+    api_response = api_instance.delete_app_token1(app_id, token_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->delete_alert_rule_using_delete: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->delete_app_token1: %s\n" % e)
 ```
 
 ### Parameters
 
-| Name                    | Type    | Description       | Notes |
-| ----------------------- | ------- | ----------------- | ----- |
-| **updateable_alert_id** | **int** | updateableAlertId |
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
 
 ### Return type
 
@@ -115,62 +119,10 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **disable_alert_rule_using_put**
-> GenericApiResponse disable_alert_rule_using_put(updateable_alert_id)
+# **get_app_tokens1**
+> GenericApiResponse get_app_tokens1(app_id)
 
-Disable alert rule
-
-### Example
-```python
-from __future__ import print_function
-import time
-import stcloud
-from stcloud.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = stcloud.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
-updateable_alert_id = 789 # int | updateableAlertId
-
-try:
-    # Disable alert rule
-    api_response = api_instance.disable_alert_rule_using_put(updateable_alert_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AlertsApi->disable_alert_rule_using_put: %s\n" % e)
-```
-
-### Parameters
-
-| Name                    | Type    | Description       | Notes |
-| ----------------------- | ------- | ----------------- | ----- |
-| **updateable_alert_id** | **int** | updateableAlertId |
-
-### Return type
-
-[**GenericApiResponse**](GenericApiResponse.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **enable_alert_rule_using_put**
-> GenericApiResponse enable_alert_rule_using_put(updateable_alert_id)
-
-Enable alert rule
+Get app available tokens
 
 ### Example
 ```python
@@ -187,67 +139,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
-updateable_alert_id = 789 # int | updateableAlertId
-
-try:
-    # Enable alert rule
-    api_response = api_instance.enable_alert_rule_using_put(updateable_alert_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AlertsApi->enable_alert_rule_using_put: %s\n" % e)
-```
-
-### Parameters
-
-| Name                    | Type    | Description       | Notes |
-| ----------------------- | ------- | ----------------- | ----- |
-| **updateable_alert_id** | **int** | updateableAlertId |
-
-### Return type
-
-[**GenericApiResponse**](GenericApiResponse.md)
-
-### Authorization
-
-[api_key](../README.md#api_key)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_alert_rules_for_app_using_get**
-> GenericApiResponse get_alert_rules_for_app_using_get(app_id)
-
-Get alert rules for an app
-
-### Example
-```python
-from __future__ import print_function
-import time
-import stcloud
-from stcloud.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-configuration = stcloud.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
+api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
 app_id = 789 # int | appId
 
 try:
-    # Get alert rules for an app
-    api_response = api_instance.get_alert_rules_for_app_using_get(app_id)
+    # Get app available tokens
+    api_response = api_instance.get_app_tokens1(app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->get_alert_rules_for_app_using_get: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->get_app_tokens1: %s\n" % e)
 ```
 
 ### Parameters
@@ -255,6 +155,116 @@ except ApiException as e:
 | Name       | Type    | Description | Notes |
 | ---------- | ------- | ----------- | ----- |
 | **app_id** | **int** | appId       |
+
+### Return type
+
+[**GenericApiResponse**](GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **regenerate_app_token**
+> GenericApiResponse regenerate_app_token(app_id, token_id)
+
+Regenerate app token)
+
+### Example
+```python
+from __future__ import print_function
+import time
+import stcloud
+from stcloud.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = stcloud.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+app_id = 789 # int | appId
+token_id = 789 # int | tokenId
+
+try:
+    # Regenerate app token)
+    api_response = api_instance.regenerate_app_token(app_id, token_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TokensApiControllerApi->regenerate_app_token: %s\n" % e)
+```
+
+### Parameters
+
+| Name         | Type    | Description | Notes |
+| ------------ | ------- | ----------- | ----- |
+| **app_id**   | **int** | appId       |
+| **token_id** | **int** | tokenId     |
+
+### Return type
+
+[**GenericApiResponse**](GenericApiResponse.md)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_app_token**
+> GenericApiResponse update_app_token(app_id, token_id, dto)
+
+Update app token (enable/disable)
+
+### Example
+```python
+from __future__ import print_function
+import time
+import stcloud
+from stcloud.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = stcloud.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+app_id = 789 # int | appId
+token_id = 789 # int | tokenId
+dto = stcloud.UpdateTokenDto() # UpdateTokenDto | dto
+
+try:
+    # Update app token (enable/disable)
+    api_response = api_instance.update_app_token(app_id, token_id, dto)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling TokensApiControllerApi->update_app_token: %s\n" % e)
+```
+
+### Parameters
+
+| Name         | Type                                    | Description | Notes |
+| ------------ | --------------------------------------- | ----------- | ----- |
+| **app_id**   | **int**                                 | appId       |
+| **token_id** | **int**                                 | tokenId     |
+| **dto**      | [**UpdateTokenDto**](UpdateTokenDto.md) | dto         |
 
 ### Return type
 

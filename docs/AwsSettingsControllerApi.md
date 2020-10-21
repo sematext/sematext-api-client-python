@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**update_using_put**](AwsSettingsControllerApi.md#update_using_put) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#39;s AWS CloudWatch settings
+| Method                                                               | HTTP request                               | Description                              |
+| -------------------------------------------------------------------- | ------------------------------------------ | ---------------------------------------- |
+| [**update_using_put**](AwsSettingsControllerApi.md#update_using_put) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#39;s AWS CloudWatch settings |
 
 
 # **update_using_put**
@@ -43,10 +43,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId | 
- **dto** | [**CloudWatchSettings**](CloudWatchSettings.md)| dto | 
+| Name       | Type                                            | Description | Notes |
+| ---------- | ----------------------------------------------- | ----------- | ----- |
+| **app_id** | **int**                                         | appId       |
+| **dto**    | [**CloudWatchSettings**](CloudWatchSettings.md) | dto         |
 
 ### Return type
 
@@ -62,4 +62,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

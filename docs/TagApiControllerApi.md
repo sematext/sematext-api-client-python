@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_tag_names_using_get**](TagApiControllerApi.md#get_tag_names_using_get) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames | Gets tag names for the given application identifiers appearing in the given time frame.
-[**get_using_get2**](TagApiControllerApi.md#get_using_get2) | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame.
-[**get_using_get3**](TagApiControllerApi.md#get_using_get3) | **GET** /spm-reports/api/v3/apps/{appIds}/tags | Gets values for specified tags for the given application identifiers appearing in the given time frame.
+| Method                                                                        | HTTP request                                              | Description                                                                                             |
+| ----------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**get_tag_names_using_get**](TagApiControllerApi.md#get_tag_names_using_get) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames        | Gets tag names for the given application identifiers appearing in the given time frame.                 |
+| [**get_using_get2**](TagApiControllerApi.md#get_using_get2)                   | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
+| [**get_using_get3**](TagApiControllerApi.md#get_using_get3)                   | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
 
 # **get_tag_names_using_get**
@@ -48,15 +48,15 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **str**| appIds | 
- **_from** | **int**| from | [optional] 
- **to** | **int**| to | [optional] 
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type     | Description | Notes                         |
+| ----------- | -------- | ----------- | ----------------------------- |
+| **app_ids** | **str**  | appIds      |
+| **_from**   | **int**  | from        | [optional]                    |
+| **to**      | **int**  | to          | [optional]                    |
+| **metrics** | **bool** | metrics     | [optional] [default to true]  |
+| **logs**    | **bool** | logs        | [optional] [default to true]  |
+| **events**  | **bool** | events      | [optional] [default to false] |
+| **rum**     | **bool** | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -113,16 +113,16 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **str**| appIds | 
- **tag** | [**list[str]**](str.md)| tag | 
- **_from** | **int**| from | [optional] 
- **to** | **int**| to | [optional] 
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                    | Description | Notes                         |
+| ----------- | ----------------------- | ----------- | ----------------------------- |
+| **app_ids** | **str**                 | appIds      |
+| **tag**     | [**list[str]**](str.md) | tag         |
+| **_from**   | **int**                 | from        | [optional]                    |
+| **to**      | **int**                 | to          | [optional]                    |
+| **metrics** | **bool**                | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                | logs        | [optional] [default to true]  |
+| **events**  | **bool**                | events      | [optional] [default to false] |
+| **rum**     | **bool**                | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -179,16 +179,16 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_ids** | **str**| appIds | 
- **tag** | [**list[str]**](str.md)| tag | 
- **_from** | **int**| from | [optional] 
- **to** | **int**| to | [optional] 
- **metrics** | **bool**| metrics | [optional] [default to true]
- **logs** | **bool**| logs | [optional] [default to true]
- **events** | **bool**| events | [optional] [default to false]
- **rum** | **bool**| rum | [optional] [default to true]
+| Name        | Type                    | Description | Notes                         |
+| ----------- | ----------------------- | ----------- | ----------------------------- |
+| **app_ids** | **str**                 | appIds      |
+| **tag**     | [**list[str]**](str.md) | tag         |
+| **_from**   | **int**                 | from        | [optional]                    |
+| **to**      | **int**                 | to          | [optional]                    |
+| **metrics** | **bool**                | metrics     | [optional] [default to true]  |
+| **logs**    | **bool**                | logs        | [optional] [default to true]  |
+| **events**  | **bool**                | events      | [optional] [default to false] |
+| **rum**     | **bool**                | rum         | [optional] [default to true]  |
 
 ### Return type
 
@@ -204,4 +204,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

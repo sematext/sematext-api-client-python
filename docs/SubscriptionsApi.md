@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**list_using_get1**](SubscriptionsApi.md#list_using_get1) | **GET** /users-web/api/v3/apps/{appId}/subscriptions | Get subscriptions for an app
-[**send_report_using_post**](SubscriptionsApi.md#send_report_using_post) | **POST** /users-web/api/v3/apps/{appId}/report/send | Trigger emailing of report for an app
+| Method                                                                   | HTTP request                                         | Description                           |
+| ------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------- |
+| [**list_using_get1**](SubscriptionsApi.md#list_using_get1)               | **GET** /users-web/api/v3/apps/{appId}/subscriptions | Get subscriptions for an app          |
+| [**send_report_using_post**](SubscriptionsApi.md#send_report_using_post) | **POST** /users-web/api/v3/apps/{appId}/report/send  | Trigger emailing of report for an app |
 
 
 # **list_using_get1**
@@ -41,9 +41,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId | 
+| Name       | Type    | Description | Notes |
+| ---------- | ------- | ----------- | ----- |
+| **app_id** | **int** | appId       |
 
 ### Return type
 
@@ -94,10 +94,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId | 
- **email_dto** | [**ReportInfo**](ReportInfo.md)| emailDto | 
+| Name          | Type                            | Description | Notes |
+| ------------- | ------------------------------- | ----------- | ----- |
+| **app_id**    | **int**                         | appId       |
+| **email_dto** | [**ReportInfo**](ReportInfo.md) | emailDto    |
 
 ### Return type
 
@@ -113,4 +113,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
