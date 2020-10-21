@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://localhost*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**get_alert_notifications_for_app_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_app_using_post) | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app
-[**get_alert_notifications_for_user_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_user_using_post) | **POST** /users-web/api/v3/notifications/alerts | Get alert notifications for a user
+| Method                                                                                                                  | HTTP request                                                 | Description                        |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| [**get_alert_notifications_for_app_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_app_using_post)   | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app |
+| [**get_alert_notifications_for_user_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_user_using_post) | **POST** /users-web/api/v3/notifications/alerts              | Get alert notifications for a user |
 
 
 # **get_alert_notifications_for_app_using_post**
@@ -44,10 +44,10 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **app_id** | **int**| appId | 
- **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md)| Time Interval | 
+| Name              | Type                                                        | Description   | Notes |
+| ----------------- | ----------------------------------------------------------- | ------------- | ----- |
+| **app_id**        | **int**                                                     | appId         |
+| **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
 
 ### Return type
 
@@ -99,9 +99,9 @@ except ApiException as e:
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md)| Time Interval | 
+| Name              | Type                                                        | Description   | Notes |
+| ----------------- | ----------------------------------------------------------- | ------------- | ----- |
+| **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
 
 ### Return type
 
@@ -117,4 +117,3 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
