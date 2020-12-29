@@ -33,12 +33,12 @@ class TokensApiControllerApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_app_token(self, app_id, dto, **kwargs):  # noqa: E501
+    def create_app_token1(self, app_id, dto, **kwargs):  # noqa: E501
         """Create new app token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_app_token(app_id, dto, async_req=True)
+        >>> thread = api.create_app_token1(app_id, dto, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,17 +50,17 @@ class TokensApiControllerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_app_token_with_http_info(app_id, dto, **kwargs)  # noqa: E501
+            return self.create_app_token1_with_http_info(app_id, dto, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_app_token_with_http_info(app_id, dto, **kwargs)  # noqa: E501
+            (data) = self.create_app_token1_with_http_info(app_id, dto, **kwargs)  # noqa: E501
             return data
 
-    def create_app_token_with_http_info(self, app_id, dto, **kwargs):  # noqa: E501
+    def create_app_token1_with_http_info(self, app_id, dto, **kwargs):  # noqa: E501
         """Create new app token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_app_token_with_http_info(app_id, dto, async_req=True)
+        >>> thread = api.create_app_token1_with_http_info(app_id, dto, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -82,18 +82,18 @@ class TokensApiControllerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_app_token" % key
+                    " to method create_app_token1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `create_app_token`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `create_app_token1`")  # noqa: E501
         # verify the required parameter 'dto' is set
         if ('dto' not in params or
                 params['dto'] is None):
-            raise ValueError("Missing the required parameter `dto` when calling `create_app_token`")  # noqa: E501
+            raise ValueError("Missing the required parameter `dto` when calling `create_app_token1`")  # noqa: E501
 
         collection_formats = {}
 
@@ -243,12 +243,12 @@ class TokensApiControllerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_app_tokens1(self, app_id, **kwargs):  # noqa: E501
+    def get_app_tokens(self, app_id, **kwargs):  # noqa: E501
         """Get app available tokens  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_app_tokens1(app_id, async_req=True)
+        >>> thread = api.get_app_tokens(app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -259,17 +259,17 @@ class TokensApiControllerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_app_tokens1_with_http_info(app_id, **kwargs)  # noqa: E501
+            return self.get_app_tokens_with_http_info(app_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_app_tokens1_with_http_info(app_id, **kwargs)  # noqa: E501
+            (data) = self.get_app_tokens_with_http_info(app_id, **kwargs)  # noqa: E501
             return data
 
-    def get_app_tokens1_with_http_info(self, app_id, **kwargs):  # noqa: E501
+    def get_app_tokens_with_http_info(self, app_id, **kwargs):  # noqa: E501
         """Get app available tokens  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_app_tokens1_with_http_info(app_id, async_req=True)
+        >>> thread = api.get_app_tokens_with_http_info(app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -290,14 +290,14 @@ class TokensApiControllerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_app_tokens1" % key
+                    " to method get_app_tokens" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `get_app_tokens1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `get_app_tokens`")  # noqa: E501
 
         collection_formats = {}
 
@@ -340,12 +340,12 @@ class TokensApiControllerApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def regenerate_app_token(self, app_id, token_id, **kwargs):  # noqa: E501
+    def regenerate_app_token1(self, app_id, token_id, **kwargs):  # noqa: E501
         """Regenerate app token)  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.regenerate_app_token(app_id, token_id, async_req=True)
+        >>> thread = api.regenerate_app_token1(app_id, token_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -357,17 +357,17 @@ class TokensApiControllerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.regenerate_app_token_with_http_info(app_id, token_id, **kwargs)  # noqa: E501
+            return self.regenerate_app_token1_with_http_info(app_id, token_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.regenerate_app_token_with_http_info(app_id, token_id, **kwargs)  # noqa: E501
+            (data) = self.regenerate_app_token1_with_http_info(app_id, token_id, **kwargs)  # noqa: E501
             return data
 
-    def regenerate_app_token_with_http_info(self, app_id, token_id, **kwargs):  # noqa: E501
+    def regenerate_app_token1_with_http_info(self, app_id, token_id, **kwargs):  # noqa: E501
         """Regenerate app token)  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.regenerate_app_token_with_http_info(app_id, token_id, async_req=True)
+        >>> thread = api.regenerate_app_token1_with_http_info(app_id, token_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -389,18 +389,18 @@ class TokensApiControllerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method regenerate_app_token" % key
+                    " to method regenerate_app_token1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `regenerate_app_token`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `regenerate_app_token1`")  # noqa: E501
         # verify the required parameter 'token_id' is set
         if ('token_id' not in params or
                 params['token_id'] is None):
-            raise ValueError("Missing the required parameter `token_id` when calling `regenerate_app_token`")  # noqa: E501
+            raise ValueError("Missing the required parameter `token_id` when calling `regenerate_app_token1`")  # noqa: E501
 
         collection_formats = {}
 
@@ -446,7 +446,7 @@ class TokensApiControllerApi(object):
             collection_formats=collection_formats)
 
     def update_app_token(self, app_id, token_id, dto, **kwargs):  # noqa: E501
-        """Update app token (enable/disable)  # noqa: E501
+        """Update app token (enable/disable or name)  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -469,7 +469,7 @@ class TokensApiControllerApi(object):
             return data
 
     def update_app_token_with_http_info(self, app_id, token_id, dto, **kwargs):  # noqa: E501
-        """Update app token (enable/disable)  # noqa: E501
+        """Update app token (enable/disable or name)  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True

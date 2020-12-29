@@ -31,26 +31,52 @@ class CreateTokenDto(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'name': 'str',
         'readable': 'bool',
         'writeable': 'bool'
     }
 
     attribute_map = {
+        'name': 'name',
         'readable': 'readable',
         'writeable': 'writeable'
     }
 
-    def __init__(self, readable=None, writeable=None):  # noqa: E501
+    def __init__(self, name=None, readable=None, writeable=None):  # noqa: E501
         """CreateTokenDto - a model defined in Swagger"""  # noqa: E501
 
+        self._name = None
         self._readable = None
         self._writeable = None
         self.discriminator = None
 
+        if name is not None:
+            self.name = name
         if readable is not None:
             self.readable = readable
         if writeable is not None:
             self.writeable = writeable
+
+    @property
+    def name(self):
+        """Gets the name of this CreateTokenDto.  # noqa: E501
+
+
+        :return: The name of this CreateTokenDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this CreateTokenDto.
+
+
+        :param name: The name of this CreateTokenDto.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def readable(self):

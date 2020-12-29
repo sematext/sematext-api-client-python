@@ -31,21 +31,26 @@ class UpdateTokenDto(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'enabled': 'bool'
+        'enabled': 'bool',
+        'name': 'str'
     }
 
     attribute_map = {
-        'enabled': 'enabled'
+        'enabled': 'enabled',
+        'name': 'name'
     }
 
-    def __init__(self, enabled=None):  # noqa: E501
+    def __init__(self, enabled=None, name=None):  # noqa: E501
         """UpdateTokenDto - a model defined in Swagger"""  # noqa: E501
 
         self._enabled = None
+        self._name = None
         self.discriminator = None
 
         if enabled is not None:
             self.enabled = enabled
+        if name is not None:
+            self.name = name
 
     @property
     def enabled(self):
@@ -67,6 +72,27 @@ class UpdateTokenDto(object):
         """
 
         self._enabled = enabled
+
+    @property
+    def name(self):
+        """Gets the name of this UpdateTokenDto.  # noqa: E501
+
+
+        :return: The name of this UpdateTokenDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this UpdateTokenDto.
+
+
+        :param name: The name of this UpdateTokenDto.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
