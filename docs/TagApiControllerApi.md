@@ -1,6 +1,6 @@
 # stcloud.TagApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                        | HTTP request                                              | Description                                                                                             |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -8,9 +8,8 @@ All URIs are relative to *https://localhost*
 | [**get_using_get2**](TagApiControllerApi.md#get_using_get2)                   | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 | [**get_using_get3**](TagApiControllerApi.md#get_using_get3)                   | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
-
 # **get_tag_names_using_get**
-> object get_tag_names_using_get(app_ids, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+> TagNamesResponse get_tag_names_using_get(app_ids, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets tag names for the given application identifiers appearing in the given time frame.
 
@@ -60,7 +59,7 @@ except ApiException as e:
 
 ### Return type
 
-**object**
+[**TagNamesResponse**](TagNamesResponse.md)
 
 ### Authorization
 
@@ -68,13 +67,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_using_get2**
-> object get_using_get2(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+> dict(str, Dimension) get_using_get2(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
@@ -126,7 +125,7 @@ except ApiException as e:
 
 ### Return type
 
-**object**
+[**dict(str, Dimension)**](Dimension.md)
 
 ### Authorization
 
@@ -134,13 +133,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_using_get3**
-> object get_using_get3(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+> dict(str, Dimension) get_using_get3(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
@@ -192,7 +191,7 @@ except ApiException as e:
 
 ### Return type
 
-**object**
+[**dict(str, Dimension)**](Dimension.md)
 
 ### Authorization
 
@@ -200,7 +199,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

@@ -1,15 +1,14 @@
 # stcloud.AlertNotificationsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                                                                  | HTTP request                                                 | Description                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
 | [**get_alert_notifications_for_app_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_app_using_post)   | **POST** /users-web/api/v3/apps/{appId}/notifications/alerts | Get alert notifications for an app |
 | [**get_alert_notifications_for_user_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_user_using_post) | **POST** /users-web/api/v3/notifications/alerts              | Get alert notifications for a user |
 
-
 # **get_alert_notifications_for_app_using_post**
-> GenericApiResponse get_alert_notifications_for_app_using_post(app_id, time_interval)
+> NotificationsResponse get_alert_notifications_for_app_using_post(body, app_id)
 
 Get alert notifications for an app
 
@@ -31,12 +30,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.AlertNotificationsApi(stcloud.ApiClient(configuration))
+body = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
 app_id = 789 # int | appId
-time_interval = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
 
 try:
     # Get alert notifications for an app
-    api_response = api_instance.get_alert_notifications_for_app_using_post(app_id, time_interval)
+    api_response = api_instance.get_alert_notifications_for_app_using_post(body, app_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AlertNotificationsApi->get_alert_notifications_for_app_using_post: %s\n" % e)
@@ -44,14 +43,14 @@ except ApiException as e:
 
 ### Parameters
 
-| Name              | Type                                                        | Description   | Notes |
-| ----------------- | ----------------------------------------------------------- | ------------- | ----- |
-| **app_id**        | **int**                                                     | appId         |
-| **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
+| Name       | Type                                                        | Description   | Notes |
+| ---------- | ----------------------------------------------------------- | ------------- | ----- |
+| **body**   | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
+| **app_id** | **int**                                                     | appId         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**NotificationsResponse**](NotificationsResponse.md)
 
 ### Authorization
 
@@ -65,7 +64,7 @@ except ApiException as e:
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_notifications_for_user_using_post**
-> GenericApiResponse get_alert_notifications_for_user_using_post(time_interval)
+> NotificationsResponse get_alert_notifications_for_user_using_post(body)
 
 Get alert notifications for a user
 
@@ -87,11 +86,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.AlertNotificationsApi(stcloud.ApiClient(configuration))
-time_interval = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
+body = stcloud.AlertNotificationRequest() # AlertNotificationRequest | Time Interval
 
 try:
     # Get alert notifications for a user
-    api_response = api_instance.get_alert_notifications_for_user_using_post(time_interval)
+    api_response = api_instance.get_alert_notifications_for_user_using_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AlertNotificationsApi->get_alert_notifications_for_user_using_post: %s\n" % e)
@@ -99,13 +98,13 @@ except ApiException as e:
 
 ### Parameters
 
-| Name              | Type                                                        | Description   | Notes |
-| ----------------- | ----------------------------------------------------------- | ------------- | ----- |
-| **time_interval** | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
+| Name     | Type                                                        | Description   | Notes |
+| -------- | ----------------------------------------------------------- | ------------- | ----- |
+| **body** | [**AlertNotificationRequest**](AlertNotificationRequest.md) | Time Interval |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**NotificationsResponse**](NotificationsResponse.md)
 
 ### Authorization
 

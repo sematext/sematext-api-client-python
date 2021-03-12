@@ -1,18 +1,17 @@
 # stcloud.TokensApiControllerApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                       | HTTP request                                                        | Description                               |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
-| [**create_app_token1**](TokensApiControllerApi.md#create_app_token1)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**create_app_token**](TokensApiControllerApi.md#create_app_token)           | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
 | [**delete_app_token1**](TokensApiControllerApi.md#delete_app_token1)         | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
-| [**get_app_tokens**](TokensApiControllerApi.md#get_app_tokens)               | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**get_app_tokens1**](TokensApiControllerApi.md#get_app_tokens1)             | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
 | [**regenerate_app_token1**](TokensApiControllerApi.md#regenerate_app_token1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
 | [**update_app_token**](TokensApiControllerApi.md#update_app_token)           | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
-
-# **create_app_token1**
-> GenericApiResponse create_app_token1(app_id, dto)
+# **create_app_token**
+> TokenResponse create_app_token(body, app_id)
 
 Create new app token
 
@@ -32,27 +31,27 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+body = stcloud.CreateTokenDto() # CreateTokenDto | dto
 app_id = 789 # int | appId
-dto = stcloud.CreateTokenDto() # CreateTokenDto | dto
 
 try:
     # Create new app token
-    api_response = api_instance.create_app_token1(app_id, dto)
+    api_response = api_instance.create_app_token(body, app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TokensApiControllerApi->create_app_token1: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->create_app_token: %s\n" % e)
 ```
 
 ### Parameters
 
 | Name       | Type                                    | Description | Notes |
 | ---------- | --------------------------------------- | ----------- | ----- |
+| **body**   | [**CreateTokenDto**](CreateTokenDto.md) | dto         |
 | **app_id** | **int**                                 | appId       |
-| **dto**    | [**CreateTokenDto**](CreateTokenDto.md) | dto         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**TokenResponse**](TokenResponse.md)
 
 ### Authorization
 
@@ -66,7 +65,7 @@ except ApiException as e:
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_app_token1**
-> GenericApiResponse delete_app_token1(app_id, token_id)
+> GenericMapBasedApiResponse delete_app_token1(app_id, token_id)
 
 Delete app token
 
@@ -106,7 +105,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**GenericMapBasedApiResponse**](GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -114,13 +113,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_app_tokens**
-> GenericApiResponse get_app_tokens(app_id)
+# **get_app_tokens1**
+> TokensResponse get_app_tokens1(app_id)
 
 Get app available tokens
 
@@ -144,10 +143,10 @@ app_id = 789 # int | appId
 
 try:
     # Get app available tokens
-    api_response = api_instance.get_app_tokens(app_id)
+    api_response = api_instance.get_app_tokens1(app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TokensApiControllerApi->get_app_tokens: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->get_app_tokens1: %s\n" % e)
 ```
 
 ### Parameters
@@ -158,7 +157,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**TokensResponse**](TokensResponse.md)
 
 ### Authorization
 
@@ -166,13 +165,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **regenerate_app_token1**
-> GenericApiResponse regenerate_app_token1(app_id, token_id)
+> TokenResponse regenerate_app_token1(app_id, token_id)
 
 Regenerate app token)
 
@@ -212,7 +211,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**TokenResponse**](TokenResponse.md)
 
 ### Authorization
 
@@ -220,13 +219,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_app_token**
-> GenericApiResponse update_app_token(app_id, token_id, dto)
+> TokenResponse update_app_token(body, app_id, token_id)
 
 Update app token (enable/disable or name)
 
@@ -246,13 +245,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.TokensApiControllerApi(stcloud.ApiClient(configuration))
+body = stcloud.UpdateTokenDto() # UpdateTokenDto | dto
 app_id = 789 # int | appId
 token_id = 789 # int | tokenId
-dto = stcloud.UpdateTokenDto() # UpdateTokenDto | dto
 
 try:
     # Update app token (enable/disable or name)
-    api_response = api_instance.update_app_token(app_id, token_id, dto)
+    api_response = api_instance.update_app_token(body, app_id, token_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TokensApiControllerApi->update_app_token: %s\n" % e)
@@ -262,13 +261,13 @@ except ApiException as e:
 
 | Name         | Type                                    | Description | Notes |
 | ------------ | --------------------------------------- | ----------- | ----- |
+| **body**     | [**UpdateTokenDto**](UpdateTokenDto.md) | dto         |
 | **app_id**   | **int**                                 | appId       |
 | **token_id** | **int**                                 | tokenId     |
-| **dto**      | [**UpdateTokenDto**](UpdateTokenDto.md) | dto         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**TokenResponse**](TokenResponse.md)
 
 ### Authorization
 

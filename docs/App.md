@@ -25,10 +25,15 @@
 | **payment_method_id**       | **int**                                             |             | [optional] |
 | **plan**                    | [**Plan**](Plan.md)                                 |             | [optional] |
 | **prepaid_account**         | **bool**                                            |             | [optional] |
+| **read_token**              | **str**                                             |             | [optional] |
+| **read_write_token**        | **str**                                             |             | [optional] |
+| **registration_date**       | **int**                                             |             | [optional] |
 | **status**                  | **str**                                             |             | [optional] |
 | **token**                   | **str**                                             |             | [optional] |
+| **tokens**                  | **list[str]**                                       |             | [optional] |
 | **trial_end_date**          | **int**                                             |             | [optional] |
 | **url_group_limit**         | **int**                                             |             | [optional] |
 | **user_roles**              | [**list[UserRole]**](UserRole.md)                   |             | [optional] |
+| **write_token**             | **str**                                             |             | [optional] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

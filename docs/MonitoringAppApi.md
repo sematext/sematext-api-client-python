@@ -1,14 +1,13 @@
 # stcloud.MonitoringAppApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
-| Method                                                                   | HTTP request                      | Description           |
-| ------------------------------------------------------------------------ | --------------------------------- | --------------------- |
-| [**create_spm_application**](MonitoringAppApi.md#create_spm_application) | **POST** /spm-reports/api/v3/apps | Create Monitoring App |
+| Method                                                                     | HTTP request                      | Description           |
+| -------------------------------------------------------------------------- | --------------------------------- | --------------------- |
+| [**create_spm_application1**](MonitoringAppApi.md#create_spm_application1) | **POST** /spm-reports/api/v3/apps | Create Monitoring App |
 
-
-# **create_spm_application**
-> GenericApiResponse create_spm_application(application_details)
+# **create_spm_application1**
+> AppsResponse create_spm_application1(body)
 
 Create Monitoring App
 
@@ -28,25 +27,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.MonitoringAppApi(stcloud.ApiClient(configuration))
-application_details = stcloud.CreateAppInfo() # CreateAppInfo | Details of the application to be created
+body = stcloud.CreateAppInfo() # CreateAppInfo | Details of the application to be created
 
 try:
     # Create Monitoring App
-    api_response = api_instance.create_spm_application(application_details)
+    api_response = api_instance.create_spm_application1(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling MonitoringAppApi->create_spm_application: %s\n" % e)
+    print("Exception when calling MonitoringAppApi->create_spm_application1: %s\n" % e)
 ```
 
 ### Parameters
 
-| Name                    | Type                                  | Description                              | Notes |
-| ----------------------- | ------------------------------------- | ---------------------------------------- | ----- |
-| **application_details** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
+| Name     | Type                                  | Description                              | Notes |
+| -------- | ------------------------------------- | ---------------------------------------- | ----- |
+| **body** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**AppsResponse**](AppsResponse.md)
 
 ### Authorization
 

@@ -1,14 +1,13 @@
 # stcloud.LogsAppApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                     | HTTP request                          | Description     |
 | -------------------------------------------------------------------------- | ------------------------------------- | --------------- |
 | [**create_logsene_application**](LogsAppApi.md#create_logsene_application) | **POST** /logsene-reports/api/v3/apps | Create Logs App |
 
-
 # **create_logsene_application**
-> GenericApiResponse create_logsene_application(application_details)
+> AppsResponse create_logsene_application(body)
 
 Create Logs App
 
@@ -28,11 +27,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.LogsAppApi(stcloud.ApiClient(configuration))
-application_details = stcloud.CreateAppInfo() # CreateAppInfo | Details of the application to be created
+body = stcloud.CreateAppInfo() # CreateAppInfo | Details of the application to be created
 
 try:
     # Create Logs App
-    api_response = api_instance.create_logsene_application(application_details)
+    api_response = api_instance.create_logsene_application(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LogsAppApi->create_logsene_application: %s\n" % e)
@@ -40,13 +39,13 @@ except ApiException as e:
 
 ### Parameters
 
-| Name                    | Type                                  | Description                              | Notes |
-| ----------------------- | ------------------------------------- | ---------------------------------------- | ----- |
-| **application_details** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
+| Name     | Type                                  | Description                              | Notes |
+| -------- | ------------------------------------- | ---------------------------------------- | ----- |
+| **body** | [**CreateAppInfo**](CreateAppInfo.md) | Details of the application to be created |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**AppsResponse**](AppsResponse.md)
 
 ### Authorization
 
