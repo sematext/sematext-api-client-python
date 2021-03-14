@@ -1,18 +1,17 @@
 # stcloud.AlertsApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                                  | HTTP request                                                 | Description                |
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------ | -------------------------- |
-| [**create_alert_using_post**](AlertsApi.md#create_alert_using_post)                     | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
-| [**delete_alert_rule_using_delete**](AlertsApi.md#delete_alert_rule_using_delete)       | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
-| [**disable_alert_rule_using_put**](AlertsApi.md#disable_alert_rule_using_put)           | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
-| [**enable_alert_rule_using_put**](AlertsApi.md#enable_alert_rule_using_put)             | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
+| [**create_alert_using_post1**](AlertsApi.md#create_alert_using_post1)                   | **POST** /users-web/api/v3/alerts                            | Create alert rule          |
+| [**delete_alert_rule_using_delete1**](AlertsApi.md#delete_alert_rule_using_delete1)     | **DELETE** /users-web/api/v3/alerts/{updateableAlertId}      | Delete alert rule          |
+| [**disable_alert_rule_using_put1**](AlertsApi.md#disable_alert_rule_using_put1)         | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/disable | Disable alert rule         |
+| [**enable_alert_rule_using_put1**](AlertsApi.md#enable_alert_rule_using_put1)           | **PUT** /users-web/api/v3/alerts/{updateableAlertId}/enable  | Enable alert rule          |
 | [**get_alert_rules_for_app_using_get**](AlertsApi.md#get_alert_rules_for_app_using_get) | **GET** /users-web/api/v3/apps/{appId}/alerts                | Get alert rules for an app |
 
-
-# **create_alert_using_post**
-> GenericApiResponse create_alert_using_post(dto)
+# **create_alert_using_post1**
+> AlertRuleResponse create_alert_using_post1(body)
 
 Create alert rule
 
@@ -32,25 +31,25 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.AlertsApi(stcloud.ApiClient(configuration))
-dto = stcloud.AlertRule() # AlertRule | dto
+body = stcloud.AlertRule() # AlertRule | dto
 
 try:
     # Create alert rule
-    api_response = api_instance.create_alert_using_post(dto)
+    api_response = api_instance.create_alert_using_post1(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->create_alert_using_post: %s\n" % e)
+    print("Exception when calling AlertsApi->create_alert_using_post1: %s\n" % e)
 ```
 
 ### Parameters
 
-| Name    | Type                          | Description | Notes |
-| ------- | ----------------------------- | ----------- | ----- |
-| **dto** | [**AlertRule**](AlertRule.md) | dto         |
+| Name     | Type                          | Description | Notes |
+| -------- | ----------------------------- | ----------- | ----- |
+| **body** | [**AlertRule**](AlertRule.md) | dto         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**AlertRuleResponse**](AlertRuleResponse.md)
 
 ### Authorization
 
@@ -63,8 +62,8 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_alert_rule_using_delete**
-> GenericApiResponse delete_alert_rule_using_delete(updateable_alert_id)
+# **delete_alert_rule_using_delete1**
+> GenericMapBasedApiResponse delete_alert_rule_using_delete1(updateable_alert_id)
 
 Delete alert rule
 
@@ -88,10 +87,10 @@ updateable_alert_id = 789 # int | updateableAlertId
 
 try:
     # Delete alert rule
-    api_response = api_instance.delete_alert_rule_using_delete(updateable_alert_id)
+    api_response = api_instance.delete_alert_rule_using_delete1(updateable_alert_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->delete_alert_rule_using_delete: %s\n" % e)
+    print("Exception when calling AlertsApi->delete_alert_rule_using_delete1: %s\n" % e)
 ```
 
 ### Parameters
@@ -102,7 +101,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**GenericMapBasedApiResponse**](GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -110,13 +109,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **disable_alert_rule_using_put**
-> GenericApiResponse disable_alert_rule_using_put(updateable_alert_id)
+# **disable_alert_rule_using_put1**
+> GenericMapBasedApiResponse disable_alert_rule_using_put1(updateable_alert_id)
 
 Disable alert rule
 
@@ -140,10 +139,10 @@ updateable_alert_id = 789 # int | updateableAlertId
 
 try:
     # Disable alert rule
-    api_response = api_instance.disable_alert_rule_using_put(updateable_alert_id)
+    api_response = api_instance.disable_alert_rule_using_put1(updateable_alert_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->disable_alert_rule_using_put: %s\n" % e)
+    print("Exception when calling AlertsApi->disable_alert_rule_using_put1: %s\n" % e)
 ```
 
 ### Parameters
@@ -154,7 +153,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**GenericMapBasedApiResponse**](GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -162,13 +161,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **enable_alert_rule_using_put**
-> GenericApiResponse enable_alert_rule_using_put(updateable_alert_id)
+# **enable_alert_rule_using_put1**
+> GenericMapBasedApiResponse enable_alert_rule_using_put1(updateable_alert_id)
 
 Enable alert rule
 
@@ -192,10 +191,10 @@ updateable_alert_id = 789 # int | updateableAlertId
 
 try:
     # Enable alert rule
-    api_response = api_instance.enable_alert_rule_using_put(updateable_alert_id)
+    api_response = api_instance.enable_alert_rule_using_put1(updateable_alert_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AlertsApi->enable_alert_rule_using_put: %s\n" % e)
+    print("Exception when calling AlertsApi->enable_alert_rule_using_put1: %s\n" % e)
 ```
 
 ### Parameters
@@ -206,7 +205,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**GenericMapBasedApiResponse**](GenericMapBasedApiResponse.md)
 
 ### Authorization
 
@@ -214,13 +213,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_rules_for_app_using_get**
-> GenericApiResponse get_alert_rules_for_app_using_get(app_id)
+> AlertRulesResponse get_alert_rules_for_app_using_get(app_id)
 
 Get alert rules for an app
 
@@ -258,7 +257,7 @@ except ApiException as e:
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**AlertRulesResponse**](AlertRulesResponse.md)
 
 ### Authorization
 
@@ -266,7 +265,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

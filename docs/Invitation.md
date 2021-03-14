@@ -3,7 +3,7 @@
 ## Properties
 | Name               | Type                    | Description                                       | Notes      |
 | ------------------ | ----------------------- | ------------------------------------------------- | ---------- |
-| **app**            | [**App**](App.md)       | For invite request, only app.id needs to be set.  | [optional] |
+| **app**            | [**App**](App.md)       |                                                   | [optional] |
 | **apps**           | [**list[App]**](App.md) | For invite request, only apps.id needs to be set. | [optional] |
 | **id**             | **int**                 |                                                   | [optional] |
 | **invite_date**    | **datetime**            |                                                   | [optional] |

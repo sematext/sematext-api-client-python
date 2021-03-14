@@ -1,14 +1,13 @@
 # stcloud.ResetPasswordApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to */*
 
 | Method                                                                         | HTTP request                                      | Description    |
 | ------------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
 | [**reset_password_using_post**](ResetPasswordApi.md#reset_password_using_post) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
-
 # **reset_password_using_post**
-> GenericApiResponse reset_password_using_post(dto)
+> GenericMapBasedApiResponse reset_password_using_post(body)
 
 Reset Password
 
@@ -28,11 +27,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = stcloud.ResetPasswordApi(stcloud.ApiClient(configuration))
-dto = stcloud.UserInfo() # UserInfo | dto
+body = stcloud.UserInfo() # UserInfo | dto
 
 try:
     # Reset Password
-    api_response = api_instance.reset_password_using_post(dto)
+    api_response = api_instance.reset_password_using_post(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ResetPasswordApi->reset_password_using_post: %s\n" % e)
@@ -40,13 +39,13 @@ except ApiException as e:
 
 ### Parameters
 
-| Name    | Type                        | Description | Notes |
-| ------- | --------------------------- | ----------- | ----- |
-| **dto** | [**UserInfo**](UserInfo.md) | dto         |
+| Name     | Type                        | Description | Notes |
+| -------- | --------------------------- | ----------- | ----- |
+| **body** | [**UserInfo**](UserInfo.md) | dto         |
 
 ### Return type
 
-[**GenericApiResponse**](GenericApiResponse.md)
+[**GenericMapBasedApiResponse**](GenericMapBasedApiResponse.md)
 
 ### Authorization
 
