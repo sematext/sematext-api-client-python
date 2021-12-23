@@ -1,6 +1,7 @@
 # TokensResponseEntry
 
 ## Properties
+
 | Name       | Type                              | Description | Notes      |
 | ---------- | --------------------------------- | ----------- | ---------- |
 | **tokens** | [**list[TokenDto]**](TokenDto.md) |             | [optional] |

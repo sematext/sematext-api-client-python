@@ -1,6 +1,7 @@
 # Invoice
 
 ## Properties
+
 | Name             | Type                                                                | Description | Notes      |
 | ---------------- | ------------------------------------------------------------------- | ----------- | ---------- |
 | **all_charges**  | [**list[ChargesDetailsResponseDto]**](ChargesDetailsResponseDto.md) |             | [optional] |

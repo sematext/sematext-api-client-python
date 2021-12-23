@@ -1,6 +1,7 @@
 # AppMetadata
 
 ## Properties
+
 | Name                           | Type          | Description                                                | Notes      |
 | ------------------------------ | ------------- | ---------------------------------------------------------- | ---------- |
 | **aws_cloud_watch_access_key** | **str**       |                                                            | [optional] |

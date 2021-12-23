@@ -8,6 +8,7 @@ All URIs are relative to */*
 | [**get_alert_notifications_for_user_using_post**](AlertNotificationsApi.md#get_alert_notifications_for_user_using_post) | **POST** /users-web/api/v3/notifications/alerts              | Get alert notifications for a user |
 
 # **get_alert_notifications_for_app_using_post**
+
 > NotificationsResponse get_alert_notifications_for_app_using_post(body, app_id)
 
 Get alert notifications for an app
@@ -15,6 +16,7 @@ Get alert notifications for an app
 Default value of interval is 1d
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -58,12 +60,13 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_notifications_for_user_using_post**
+
 > NotificationsResponse get_alert_notifications_for_user_using_post(body)
 
 Get alert notifications for a user
@@ -71,6 +74,7 @@ Get alert notifications for a user
 Default value of interval is 1d
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -112,7 +116,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

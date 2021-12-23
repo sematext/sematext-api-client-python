@@ -2,18 +2,20 @@
 
 All URIs are relative to */*
 
-| Method                                                                        | HTTP request                                              | Description                                                                                             |
-| ----------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [**get_tag_names_using_get**](TagApiControllerApi.md#get_tag_names_using_get) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames        | Gets tag names for the given application identifiers appearing in the given time frame.                 |
-| [**get_using_get2**](TagApiControllerApi.md#get_using_get2)                   | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
-| [**get_using_get3**](TagApiControllerApi.md#get_using_get3)                   | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
+| Method                                                                          | HTTP request                                              | Description                                                                                             |
+| ------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [**get_tag_names_using_get1**](TagApiControllerApi.md#get_tag_names_using_get1) | **GET** /spm-reports/api/v3/apps/{appIds}/tagNames        | Gets tag names for the given application identifiers appearing in the given time frame.                 |
+| [**get_using_get2**](TagApiControllerApi.md#get_using_get2)                     | **GET** /spm-reports/api/v3/apps/{appIds}/metrics/filters | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
+| [**get_using_get3**](TagApiControllerApi.md#get_using_get3)                     | **GET** /spm-reports/api/v3/apps/{appIds}/tags            | Gets values for specified tags for the given application identifiers appearing in the given time frame. |
 
-# **get_tag_names_using_get**
-> TagNamesResponse get_tag_names_using_get(app_ids, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+# **get_tag_names_using_get1**
+
+> TagNamesResponse get_tag_names_using_get1(app_ids,_from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets tag names for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -39,10 +41,10 @@ rum = true # bool | rum (optional) (default to true)
 
 try:
     # Gets tag names for the given application identifiers appearing in the given time frame.
-    api_response = api_instance.get_tag_names_using_get(app_ids, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+    api_response = api_instance.get_tag_names_using_get1(app_ids, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TagApiControllerApi->get_tag_names_using_get: %s\n" % e)
+    print("Exception when calling TagApiControllerApi->get_tag_names_using_get1: %s\n" % e)
 ```
 
 ### Parameters
@@ -67,17 +69,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_using_get2**
-> dict(str, Dimension) get_using_get2(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+
+> dict(str, Dimension) get_using_get2(app_ids, tag,_from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -133,17 +137,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_using_get3**
-> dict(str, Dimension) get_using_get3(app_ids, tag, _from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
+
+> dict(str, Dimension) get_using_get3(app_ids, tag,_from=_from, to=to, metrics=metrics, logs=logs, events=events, rum=rum)
 
 Gets values for specified tags for the given application identifiers appearing in the given time frame.
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -199,7 +205,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

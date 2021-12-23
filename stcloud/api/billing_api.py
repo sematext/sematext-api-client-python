@@ -141,12 +141,12 @@ class BillingApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def list_available_plans_using_get(self, **kwargs):  # noqa: E501
+    def list_available_plans_using_get1(self, **kwargs):  # noqa: E501
         """Get available plans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_available_plans_using_get(async_req=True)
+        >>> thread = api.list_available_plans_using_get1(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -158,17 +158,17 @@ class BillingApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.list_available_plans_using_get_with_http_info(**kwargs)  # noqa: E501
+            return self.list_available_plans_using_get1_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.list_available_plans_using_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.list_available_plans_using_get1_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def list_available_plans_using_get_with_http_info(self, **kwargs):  # noqa: E501
+    def list_available_plans_using_get1_with_http_info(self, **kwargs):  # noqa: E501
         """Get available plans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_available_plans_using_get_with_http_info(async_req=True)
+        >>> thread = api.list_available_plans_using_get1_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -190,7 +190,7 @@ class BillingApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_available_plans_using_get" % key
+                    " to method list_available_plans_using_get1" % key
                 )
             params[key] = val
         del params['kwargs']

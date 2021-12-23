@@ -9,8 +9,8 @@
 
 from setuptools import setup, find_packages  # mypy: disable=W0611 # noqa:
 
-NAME = "sematext-cloud-client"
-VERSION = "0.3.0"
+NAME = "sematext-api-client-python"
+VERSION = "0.4.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -18,12 +18,7 @@ VERSION = "0.3.0"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = [
-    "certifi>=2017.4.17",
-    "python-dateutil>=2.1",
-    "six>=1.10",
-    "urllib3>=1.23"
-]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
 
 with open("README.md", "r") as fh:
@@ -31,10 +26,10 @@ with open("README.md", "r") as fh:
 
 
 setup(
-    name="sematext-cloud-client",
+    name=NAME,
     version=VERSION,
     description="Sematext Cloud API",
-    author_email="packages@sematext.com ",
+    author_email="",
     url="https://github.com/sematext/sematext-api-client-python",
     keywords=["Sematext", "Cloud", "API", "Monitoring", "Logging", "Metrics"],
     install_requires=REQUIRES,
@@ -46,5 +41,5 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
         "Operating System :: OS Independent",
-    ],
+    ]
 )

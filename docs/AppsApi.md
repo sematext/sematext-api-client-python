@@ -4,21 +4,23 @@ All URIs are relative to */*
 
 | Method                                                                        | HTTP request                                               | Description                                                        |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------ |
-| [**delete_using_delete1**](AppsApi.md#delete_using_delete1)                   | **DELETE** /users-web/api/v3/apps/{anyStateAppId}          | delete                                                             |
-| [**get_app_types_using_get1**](AppsApi.md#get_app_types_using_get1)           | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
-| [**get_using_get1**](AppsApi.md#get_using_get1)                               | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
-| [**invite_app_guests_using_post1**](AppsApi.md#invite_app_guests_using_post1) | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
-| [**list_apps_users_using_get1**](AppsApi.md#list_apps_users_using_get1)       | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
+| [**delete_using_delete**](AppsApi.md#delete_using_delete)                     | **DELETE** /users-web/api/v3/apps/{anyStateAppId}          | delete                                                             |
+| [**get_app_types_using_get**](AppsApi.md#get_app_types_using_get)             | **GET** /users-web/api/v3/apps/types                       | Get all App types supported for the account identified with apiKey |
+| [**get_using_get**](AppsApi.md#get_using_get)                                 | **GET** /users-web/api/v3/apps/{anyStateAppId}             | Gets defails for one particular App                                |
+| [**invite_app_guests_using_post**](AppsApi.md#invite_app_guests_using_post)   | **POST** /users-web/api/v3/apps/guests                     | Invite guests to an app                                            |
+| [**list_apps_users_using_get**](AppsApi.md#list_apps_users_using_get)         | **GET** /users-web/api/v3/apps/users                       | Get all users of apps accessible to this account                   |
 | [**list_using_get**](AppsApi.md#list_using_get)                               | **GET** /users-web/api/v3/apps                             | Get all apps accessible by account identified with apiKey          |
 | [**update_description_using_put1**](AppsApi.md#update_description_using_put1) | **PUT** /users-web/api/v3/apps/{anyStateAppId}/description | Update description of the app                                      |
-| [**update_using_put3**](AppsApi.md#update_using_put3)                         | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
+| [**update_using_put2**](AppsApi.md#update_using_put2)                         | **PUT** /users-web/api/v3/apps/{anyStateAppId}             | Update app                                                         |
 
-# **delete_using_delete1**
-> GenericMapBasedApiResponse delete_using_delete1(any_state_app_id)
+# **delete_using_delete**
+
+> GenericMapBasedApiResponse delete_using_delete(any_state_app_id)
 
 delete
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -38,10 +40,10 @@ any_state_app_id = 789 # int | anyStateAppId
 
 try:
     # delete
-    api_response = api_instance.delete_using_delete1(any_state_app_id)
+    api_response = api_instance.delete_using_delete(any_state_app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->delete_using_delete1: %s\n" % e)
+    print("Exception when calling AppsApi->delete_using_delete: %s\n" % e)
 ```
 
 ### Parameters
@@ -60,17 +62,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_app_types_using_get1**
-> AppTypesResponse get_app_types_using_get1()
+# **get_app_types_using_get**
+
+> AppTypesResponse get_app_types_using_get()
 
 Get all App types supported for the account identified with apiKey
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -89,13 +93,14 @@ api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 
 try:
     # Get all App types supported for the account identified with apiKey
-    api_response = api_instance.get_app_types_using_get1()
+    api_response = api_instance.get_app_types_using_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->get_app_types_using_get1: %s\n" % e)
+    print("Exception when calling AppsApi->get_app_types_using_get: %s\n" % e)
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -108,17 +113,19 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_using_get1**
-> AppResponse get_using_get1(any_state_app_id)
+# **get_using_get**
+
+> AppResponse get_using_get(any_state_app_id)
 
 Gets defails for one particular App
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -138,10 +145,10 @@ any_state_app_id = 789 # int | anyStateAppId
 
 try:
     # Gets defails for one particular App
-    api_response = api_instance.get_using_get1(any_state_app_id)
+    api_response = api_instance.get_using_get(any_state_app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->get_using_get1: %s\n" % e)
+    print("Exception when calling AppsApi->get_using_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -160,17 +167,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **invite_app_guests_using_post1**
-> GenericMapBasedApiResponse invite_app_guests_using_post1(body)
+# **invite_app_guests_using_post**
+
+> GenericMapBasedApiResponse invite_app_guests_using_post(body)
 
 Invite guests to an app
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -190,10 +199,10 @@ body = stcloud.Invitation() # Invitation | For `app` and `apps` fields only `id`
 
 try:
     # Invite guests to an app
-    api_response = api_instance.invite_app_guests_using_post1(body)
+    api_response = api_instance.invite_app_guests_using_post(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->invite_app_guests_using_post1: %s\n" % e)
+    print("Exception when calling AppsApi->invite_app_guests_using_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -212,17 +221,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_apps_users_using_get1**
-> AppsResponse list_apps_users_using_get1()
+# **list_apps_users_using_get**
+
+> AppsResponse list_apps_users_using_get()
 
 Get all users of apps accessible to this account
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -241,13 +252,14 @@ api_instance = stcloud.AppsApi(stcloud.ApiClient(configuration))
 
 try:
     # Get all users of apps accessible to this account
-    api_response = api_instance.list_apps_users_using_get1()
+    api_response = api_instance.list_apps_users_using_get()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->list_apps_users_using_get1: %s\n" % e)
+    print("Exception when calling AppsApi->list_apps_users_using_get: %s\n" % e)
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -260,17 +272,19 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_using_get**
+
 > AppsResponse list_using_get()
 
 Get all apps accessible by account identified with apiKey
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -296,6 +310,7 @@ except ApiException as e:
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -308,12 +323,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_description_using_put1**
+
 > AppResponse update_description_using_put1(any_state_app_id, body=body)
 
 Update description of the app
@@ -321,6 +337,7 @@ Update description of the app
 App can be in any state
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -364,19 +381,21 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_using_put3**
-> AppResponse update_using_put3(body, any_state_app_id)
+# **update_using_put2**
+
+> AppResponse update_using_put2(body, any_state_app_id)
 
 Update app
 
 App can be in any state
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -397,10 +416,10 @@ any_state_app_id = 789 # int | App Id
 
 try:
     # Update app
-    api_response = api_instance.update_using_put3(body, any_state_app_id)
+    api_response = api_instance.update_using_put2(body, any_state_app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AppsApi->update_using_put3: %s\n" % e)
+    print("Exception when calling AppsApi->update_using_put2: %s\n" % e)
 ```
 
 ### Parameters
@@ -420,7 +439,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

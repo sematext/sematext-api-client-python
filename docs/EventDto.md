@@ -1,6 +1,7 @@
 # EventDto
 
 ## Properties
+
 | Name      | Type       | Description | Notes      |
 | --------- | ---------- | ----------- | ---------- |
 | **_from** | **object** |             | [optional] |

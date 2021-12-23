@@ -112,7 +112,7 @@ class EventDto(object):
         :param type: The type of this EventDto.  # noqa: E501
         :type: str
         """
-        allowed_values = ["CREATED", "DISABLED", "DELETED", "REACTIVATED", "PLAN_UPDATE", "PAYMENT_METHOD_UPDATE", "SEND_EMAIL_CHANGE", "AUTOMATIC_PLAN_UPGRADE_CHANGE", "MAX_LIMIT_CHANGE", "SAMPLING_CHANGE", "OWNERSHIP_CHANGE"]  # noqa: E501
+        allowed_values = ["CREATED", "DISABLED", "DELETED", "REACTIVATED", "PLAN_UPDATE", "PAYMENT_METHOD_UPDATE", "SEND_EMAIL_CHANGE", "AUTOMATIC_PLAN_UPGRADE_CHANGE", "MAX_LIMIT_CHANGE", "SAMPLING_CHANGE", "OWNERSHIP_CHANGE", "PIPELINE_CHANGE"]  # noqa: E501
         if type not in allowed_values:
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501

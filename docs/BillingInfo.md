@@ -1,6 +1,7 @@
 # BillingInfo
 
 ## Properties
+
 | Name               | Type    | Description | Notes      |
 | ------------------ | ------- | ----------- | ---------- |
 | **credit_card_id** | **int** |             | [optional] |
