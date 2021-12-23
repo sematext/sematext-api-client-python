@@ -1,6 +1,7 @@
 # BasicOrganizationDto
 
 ## Properties
+
 | Name             | Type                                                  | Description | Notes      |
 | ---------------- | ----------------------------------------------------- | ----------- | ---------- |
 | **auth_methods** | [**list[BasicAuthMethodDto]**](BasicAuthMethodDto.md) |             | [optional] |

@@ -1,6 +1,7 @@
 # CreateAppInfo
 
 ## Properties
+
 | Name                | Type                              | Description | Notes      |
 | ------------------- | --------------------------------- | ----------- | ---------- |
 | **app_type**        | **str**                           |             | [optional] |

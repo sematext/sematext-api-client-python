@@ -2,18 +2,20 @@
 
 All URIs are relative to */*
 
-| Method                                                                             | HTTP request                                                       | Description            |
-| ---------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------- |
-| [**get_detailed_invoice_using_get**](BillingApi.md#get_detailed_invoice_using_get) | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
-| [**list_available_plans_using_get**](BillingApi.md#list_available_plans_using_get) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
-| [**update_plan_using_put**](BillingApi.md#update_plan_using_put)                   | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
+| Method                                                                               | HTTP request                                                       | Description            |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------ | ---------------------- |
+| [**get_detailed_invoice_using_get**](BillingApi.md#get_detailed_invoice_using_get)   | **GET** /users-web/api/v3/billing/invoice/{service}/{year}/{month} | Get invoice details    |
+| [**list_available_plans_using_get1**](BillingApi.md#list_available_plans_using_get1) | **GET** /users-web/api/v3/billing/availablePlans                   | Get available plans    |
+| [**update_plan_using_put**](BillingApi.md#update_plan_using_put)                     | **PUT** /users-web/api/v3/billing/info/{appId}                     | Update plan for an app |
 
 # **get_detailed_invoice_using_get**
+
 > InvoiceResponse get_detailed_invoice_using_get(service, year, month)
 
 Get invoice details
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -59,17 +61,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_available_plans_using_get**
-> PlansResponse list_available_plans_using_get(integration_id=integration_id, app_type=app_type)
+# **list_available_plans_using_get1**
+
+> PlansResponse list_available_plans_using_get1(integration_id=integration_id, app_type=app_type)
 
 Get available plans
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -90,10 +94,10 @@ app_type = 'app_type_example' # str | appType (optional)
 
 try:
     # Get available plans
-    api_response = api_instance.list_available_plans_using_get(integration_id=integration_id, app_type=app_type)
+    api_response = api_instance.list_available_plans_using_get1(integration_id=integration_id, app_type=app_type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling BillingApi->list_available_plans_using_get: %s\n" % e)
+    print("Exception when calling BillingApi->list_available_plans_using_get1: %s\n" % e)
 ```
 
 ### Parameters
@@ -113,17 +117,19 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_plan_using_put**
+
 > UpdatePlanResponse update_plan_using_put(body, app_id)
 
 Update plan for an app
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -167,7 +173,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

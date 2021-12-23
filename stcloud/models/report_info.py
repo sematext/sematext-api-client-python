@@ -28,6 +28,7 @@ class ReportInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'additional_params': 'str',
         'addresses': 'str',
         'app_id': 'int',
         'end_date': 'datetime',
@@ -39,6 +40,7 @@ class ReportInfo(object):
     }
 
     attribute_map = {
+        'additional_params': 'additionalParams',
         'addresses': 'addresses',
         'app_id': 'appId',
         'end_date': 'endDate',
@@ -49,8 +51,9 @@ class ReportInfo(object):
         'text': 'text'
     }
 
-    def __init__(self, addresses=None, app_id=None, end_date=None, filters=None, report_name=None, start_date=None, subject=None, text=None):  # noqa: E501
+    def __init__(self, additional_params=None, addresses=None, app_id=None, end_date=None, filters=None, report_name=None, start_date=None, subject=None, text=None):  # noqa: E501
         """ReportInfo - a model defined in Swagger"""  # noqa: E501
+        self._additional_params = None
         self._addresses = None
         self._app_id = None
         self._end_date = None
@@ -60,6 +63,8 @@ class ReportInfo(object):
         self._subject = None
         self._text = None
         self.discriminator = None
+        if additional_params is not None:
+            self.additional_params = additional_params
         if addresses is not None:
             self.addresses = addresses
         if app_id is not None:
@@ -76,6 +81,27 @@ class ReportInfo(object):
             self.subject = subject
         if text is not None:
             self.text = text
+
+    @property
+    def additional_params(self):
+        """Gets the additional_params of this ReportInfo.  # noqa: E501
+
+
+        :return: The additional_params of this ReportInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._additional_params
+
+    @additional_params.setter
+    def additional_params(self, additional_params):
+        """Sets the additional_params of this ReportInfo.
+
+
+        :param additional_params: The additional_params of this ReportInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._additional_params = additional_params
 
     @property
     def addresses(self):

@@ -7,11 +7,13 @@ All URIs are relative to */*
 | [**get_for_range_using_get**](LogsUsageApiControllerApi.md#get_for_range_using_get) | **GET** /logsene-reports/api/v3/apps/{appId}/usage/{from}/{to} | getForRange |
 
 # **get_for_range_using_get**
-> UsageResponse get_for_range_using_get(app_id, _from, to)
+
+> UsageResponse get_for_range_using_get(app_id,_from, to)
 
 getForRange
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -57,7 +59,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

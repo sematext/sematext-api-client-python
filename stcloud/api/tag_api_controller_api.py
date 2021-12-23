@@ -32,12 +32,12 @@ class TagApiControllerApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def get_tag_names_using_get(self, app_ids, **kwargs):  # noqa: E501
+    def get_tag_names_using_get1(self, app_ids, **kwargs):  # noqa: E501
         """Gets tag names for the given application identifiers appearing in the given time frame.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_tag_names_using_get(app_ids, async_req=True)
+        >>> thread = api.get_tag_names_using_get1(app_ids, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -54,17 +54,17 @@ class TagApiControllerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_tag_names_using_get_with_http_info(app_ids, **kwargs)  # noqa: E501
+            return self.get_tag_names_using_get1_with_http_info(app_ids, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_tag_names_using_get_with_http_info(app_ids, **kwargs)  # noqa: E501
+            (data) = self.get_tag_names_using_get1_with_http_info(app_ids, **kwargs)  # noqa: E501
             return data
 
-    def get_tag_names_using_get_with_http_info(self, app_ids, **kwargs):  # noqa: E501
+    def get_tag_names_using_get1_with_http_info(self, app_ids, **kwargs):  # noqa: E501
         """Gets tag names for the given application identifiers appearing in the given time frame.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_tag_names_using_get_with_http_info(app_ids, async_req=True)
+        >>> thread = api.get_tag_names_using_get1_with_http_info(app_ids, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -91,14 +91,14 @@ class TagApiControllerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_tag_names_using_get" % key
+                    " to method get_tag_names_using_get1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'app_ids' is set
         if ('app_ids' not in params or
                 params['app_ids'] is None):
-            raise ValueError("Missing the required parameter `app_ids` when calling `get_tag_names_using_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_ids` when calling `get_tag_names_using_get1`")  # noqa: E501
 
         collection_formats = {}
 

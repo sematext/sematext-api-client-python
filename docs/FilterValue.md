@@ -1,6 +1,7 @@
 # FilterValue
 
 ## Properties
+
 | Name            | Type          | Description | Notes      |
 | --------------- | ------------- | ----------- | ---------- |
 | **agg_type**    | **str**       |             | [optional] |

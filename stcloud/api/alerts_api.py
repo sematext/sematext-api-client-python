@@ -32,12 +32,12 @@ class AlertsApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_alert_using_post1(self, body, **kwargs):  # noqa: E501
+    def create_alert_using_post(self, body, **kwargs):  # noqa: E501
         """Create alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_alert_using_post1(body, async_req=True)
+        >>> thread = api.create_alert_using_post(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -48,17 +48,17 @@ class AlertsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_alert_using_post1_with_http_info(body, **kwargs)  # noqa: E501
+            return self.create_alert_using_post_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_alert_using_post1_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.create_alert_using_post_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def create_alert_using_post1_with_http_info(self, body, **kwargs):  # noqa: E501
+    def create_alert_using_post_with_http_info(self, body, **kwargs):  # noqa: E501
         """Create alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_alert_using_post1_with_http_info(body, async_req=True)
+        >>> thread = api.create_alert_using_post_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -79,14 +79,14 @@ class AlertsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_alert_using_post1" % key
+                    " to method create_alert_using_post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_alert_using_post1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `create_alert_using_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -222,12 +222,12 @@ class AlertsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def disable_alert_rule_using_put1(self, updateable_alert_id, **kwargs):  # noqa: E501
+    def disable_alert_rule_using_put(self, updateable_alert_id, **kwargs):  # noqa: E501
         """Disable alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.disable_alert_rule_using_put1(updateable_alert_id, async_req=True)
+        >>> thread = api.disable_alert_rule_using_put(updateable_alert_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -238,17 +238,17 @@ class AlertsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.disable_alert_rule_using_put1_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
+            return self.disable_alert_rule_using_put_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.disable_alert_rule_using_put1_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
+            (data) = self.disable_alert_rule_using_put_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
             return data
 
-    def disable_alert_rule_using_put1_with_http_info(self, updateable_alert_id, **kwargs):  # noqa: E501
+    def disable_alert_rule_using_put_with_http_info(self, updateable_alert_id, **kwargs):  # noqa: E501
         """Disable alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.disable_alert_rule_using_put1_with_http_info(updateable_alert_id, async_req=True)
+        >>> thread = api.disable_alert_rule_using_put_with_http_info(updateable_alert_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -269,14 +269,14 @@ class AlertsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method disable_alert_rule_using_put1" % key
+                    " to method disable_alert_rule_using_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'updateable_alert_id' is set
         if ('updateable_alert_id' not in params or
                 params['updateable_alert_id'] is None):
-            raise ValueError("Missing the required parameter `updateable_alert_id` when calling `disable_alert_rule_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `updateable_alert_id` when calling `disable_alert_rule_using_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -315,12 +315,12 @@ class AlertsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def enable_alert_rule_using_put1(self, updateable_alert_id, **kwargs):  # noqa: E501
+    def enable_alert_rule_using_put(self, updateable_alert_id, **kwargs):  # noqa: E501
         """Enable alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.enable_alert_rule_using_put1(updateable_alert_id, async_req=True)
+        >>> thread = api.enable_alert_rule_using_put(updateable_alert_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -331,17 +331,17 @@ class AlertsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.enable_alert_rule_using_put1_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
+            return self.enable_alert_rule_using_put_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.enable_alert_rule_using_put1_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
+            (data) = self.enable_alert_rule_using_put_with_http_info(updateable_alert_id, **kwargs)  # noqa: E501
             return data
 
-    def enable_alert_rule_using_put1_with_http_info(self, updateable_alert_id, **kwargs):  # noqa: E501
+    def enable_alert_rule_using_put_with_http_info(self, updateable_alert_id, **kwargs):  # noqa: E501
         """Enable alert rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.enable_alert_rule_using_put1_with_http_info(updateable_alert_id, async_req=True)
+        >>> thread = api.enable_alert_rule_using_put_with_http_info(updateable_alert_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -362,14 +362,14 @@ class AlertsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method enable_alert_rule_using_put1" % key
+                    " to method enable_alert_rule_using_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'updateable_alert_id' is set
         if ('updateable_alert_id' not in params or
                 params['updateable_alert_id'] is None):
-            raise ValueError("Missing the required parameter `updateable_alert_id` when calling `enable_alert_rule_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `updateable_alert_id` when calling `enable_alert_rule_using_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -408,12 +408,12 @@ class AlertsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_alert_rules_for_app_using_get(self, app_id, **kwargs):  # noqa: E501
+    def get_alert_rules_for_app_using_get1(self, app_id, **kwargs):  # noqa: E501
         """Get alert rules for an app  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_alert_rules_for_app_using_get(app_id, async_req=True)
+        >>> thread = api.get_alert_rules_for_app_using_get1(app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -424,17 +424,17 @@ class AlertsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_alert_rules_for_app_using_get_with_http_info(app_id, **kwargs)  # noqa: E501
+            return self.get_alert_rules_for_app_using_get1_with_http_info(app_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_alert_rules_for_app_using_get_with_http_info(app_id, **kwargs)  # noqa: E501
+            (data) = self.get_alert_rules_for_app_using_get1_with_http_info(app_id, **kwargs)  # noqa: E501
             return data
 
-    def get_alert_rules_for_app_using_get_with_http_info(self, app_id, **kwargs):  # noqa: E501
+    def get_alert_rules_for_app_using_get1_with_http_info(self, app_id, **kwargs):  # noqa: E501
         """Get alert rules for an app  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_alert_rules_for_app_using_get_with_http_info(app_id, async_req=True)
+        >>> thread = api.get_alert_rules_for_app_using_get1_with_http_info(app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -455,14 +455,14 @@ class AlertsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_alert_rules_for_app_using_get" % key
+                    " to method get_alert_rules_for_app_using_get1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `get_alert_rules_for_app_using_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `get_alert_rules_for_app_using_get1`")  # noqa: E501
 
         collection_formats = {}
 

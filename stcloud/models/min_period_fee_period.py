@@ -33,9 +33,11 @@ class MinPeriodFeePeriod(object):
         'from_date': 'datetime',
         'http_monitors': 'int',
         'id': 'int',
+        'ingestion_period_fee_amount': 'float',
         'min_period_fee_amount': 'float',
         'overage_percentage': 'float',
         'plan_data_limit': 'int',
+        'storage_period_fee_amount': 'float',
         'to_date': 'datetime',
         'used_plan': 'str',
         'used_plan_period_fee': 'float'
@@ -47,24 +49,28 @@ class MinPeriodFeePeriod(object):
         'from_date': 'fromDate',
         'http_monitors': 'httpMonitors',
         'id': 'id',
+        'ingestion_period_fee_amount': 'ingestionPeriodFeeAmount',
         'min_period_fee_amount': 'minPeriodFeeAmount',
         'overage_percentage': 'overagePercentage',
         'plan_data_limit': 'planDataLimit',
+        'storage_period_fee_amount': 'storagePeriodFeeAmount',
         'to_date': 'toDate',
         'used_plan': 'usedPlan',
         'used_plan_period_fee': 'usedPlanPeriodFee'
     }
 
-    def __init__(self, browser_monitors=None, discount=None, from_date=None, http_monitors=None, id=None, min_period_fee_amount=None, overage_percentage=None, plan_data_limit=None, to_date=None, used_plan=None, used_plan_period_fee=None):  # noqa: E501
+    def __init__(self, browser_monitors=None, discount=None, from_date=None, http_monitors=None, id=None, ingestion_period_fee_amount=None, min_period_fee_amount=None, overage_percentage=None, plan_data_limit=None, storage_period_fee_amount=None, to_date=None, used_plan=None, used_plan_period_fee=None):  # noqa: E501
         """MinPeriodFeePeriod - a model defined in Swagger"""  # noqa: E501
         self._browser_monitors = None
         self._discount = None
         self._from_date = None
         self._http_monitors = None
         self._id = None
+        self._ingestion_period_fee_amount = None
         self._min_period_fee_amount = None
         self._overage_percentage = None
         self._plan_data_limit = None
+        self._storage_period_fee_amount = None
         self._to_date = None
         self._used_plan = None
         self._used_plan_period_fee = None
@@ -79,12 +85,16 @@ class MinPeriodFeePeriod(object):
             self.http_monitors = http_monitors
         if id is not None:
             self.id = id
+        if ingestion_period_fee_amount is not None:
+            self.ingestion_period_fee_amount = ingestion_period_fee_amount
         if min_period_fee_amount is not None:
             self.min_period_fee_amount = min_period_fee_amount
         if overage_percentage is not None:
             self.overage_percentage = overage_percentage
         if plan_data_limit is not None:
             self.plan_data_limit = plan_data_limit
+        if storage_period_fee_amount is not None:
+            self.storage_period_fee_amount = storage_period_fee_amount
         if to_date is not None:
             self.to_date = to_date
         if used_plan is not None:
@@ -198,6 +208,27 @@ class MinPeriodFeePeriod(object):
         self._id = id
 
     @property
+    def ingestion_period_fee_amount(self):
+        """Gets the ingestion_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+
+
+        :return: The ingestion_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+        :rtype: float
+        """
+        return self._ingestion_period_fee_amount
+
+    @ingestion_period_fee_amount.setter
+    def ingestion_period_fee_amount(self, ingestion_period_fee_amount):
+        """Sets the ingestion_period_fee_amount of this MinPeriodFeePeriod.
+
+
+        :param ingestion_period_fee_amount: The ingestion_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+        :type: float
+        """
+
+        self._ingestion_period_fee_amount = ingestion_period_fee_amount
+
+    @property
     def min_period_fee_amount(self):
         """Gets the min_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
 
@@ -259,6 +290,27 @@ class MinPeriodFeePeriod(object):
         """
 
         self._plan_data_limit = plan_data_limit
+
+    @property
+    def storage_period_fee_amount(self):
+        """Gets the storage_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+
+
+        :return: The storage_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+        :rtype: float
+        """
+        return self._storage_period_fee_amount
+
+    @storage_period_fee_amount.setter
+    def storage_period_fee_amount(self, storage_period_fee_amount):
+        """Sets the storage_period_fee_amount of this MinPeriodFeePeriod.
+
+
+        :param storage_period_fee_amount: The storage_period_fee_amount of this MinPeriodFeePeriod.  # noqa: E501
+        :type: float
+        """
+
+        self._storage_period_fee_amount = storage_period_fee_amount
 
     @property
     def to_date(self):

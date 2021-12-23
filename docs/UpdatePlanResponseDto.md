@@ -1,6 +1,7 @@
 # UpdatePlanResponseDto
 
 ## Properties
+
 | Name        | Type                              | Description | Notes      |
 | ----------- | --------------------------------- | ----------- | ---------- |
 | **events**  | [**list[EventDto]**](EventDto.md) |             | [optional] |

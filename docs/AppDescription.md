@@ -1,6 +1,7 @@
 # AppDescription
 
 ## Properties
+
 | Name            | Type    | Description | Notes      |
 | --------------- | ------- | ----------- | ---------- |
 | **description** | **str** |             | [optional] |

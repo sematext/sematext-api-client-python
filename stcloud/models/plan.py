@@ -330,7 +330,7 @@ class Plan(object):
         :param plan_scheme: The plan_scheme of this Plan.  # noqa: E501
         :type: str
         """
-        allowed_values = ["SPM_1_0", "SPM_2_0", "SEARCHENE_1_0", "LOGSENE_1_0", "LOGSENE_2_0", "RUM_1_0", "RUM_1_1", "RUM_EA", "SYNTHETICS_EA", "SYNTHETICS_1_0"]  # noqa: E501
+        allowed_values = ["SPM_1_0", "SPM_2_0", "SEARCHENE_1_0", "LOGSENE_1_0", "LOGSENE_2_0", "RUM_1_0", "RUM_1_1", "RUM_EA", "SYNTHETICS_EA", "SYNTHETICS_1_0", "BUGZ_EA"]  # noqa: E501
         if plan_scheme not in allowed_values:
             raise ValueError(
                 "Invalid value for `plan_scheme` ({0}), must be one of {1}"  # noqa: E501

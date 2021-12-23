@@ -1,6 +1,7 @@
 # LimitChangeEventDTO
 
 ## Properties
+
 | Name           | Type         | Description | Notes      |
 | -------------- | ------------ | ----------- | ---------- |
 | **event_time** | **datetime** |             | [optional] |

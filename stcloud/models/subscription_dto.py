@@ -28,6 +28,7 @@ class SubscriptionDto(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'additional_params': 'str',
         'addresses': 'str',
         'enable': 'bool',
         'filters': 'str',
@@ -43,6 +44,7 @@ class SubscriptionDto(object):
     }
 
     attribute_map = {
+        'additional_params': 'additionalParams',
         'addresses': 'addresses',
         'enable': 'enable',
         'filters': 'filters',
@@ -57,8 +59,9 @@ class SubscriptionDto(object):
         'user_permissions': 'userPermissions'
     }
 
-    def __init__(self, addresses=None, enable=None, filters=None, frequency=None, id=None, report_name=None, send_time=None, subject=None, system_id=None, text=None, time_range=None, user_permissions=None):  # noqa: E501
+    def __init__(self, additional_params=None, addresses=None, enable=None, filters=None, frequency=None, id=None, report_name=None, send_time=None, subject=None, system_id=None, text=None, time_range=None, user_permissions=None):  # noqa: E501
         """SubscriptionDto - a model defined in Swagger"""  # noqa: E501
+        self._additional_params = None
         self._addresses = None
         self._enable = None
         self._filters = None
@@ -72,6 +75,8 @@ class SubscriptionDto(object):
         self._time_range = None
         self._user_permissions = None
         self.discriminator = None
+        if additional_params is not None:
+            self.additional_params = additional_params
         if addresses is not None:
             self.addresses = addresses
         if enable is not None:
@@ -96,6 +101,27 @@ class SubscriptionDto(object):
             self.time_range = time_range
         if user_permissions is not None:
             self.user_permissions = user_permissions
+
+    @property
+    def additional_params(self):
+        """Gets the additional_params of this SubscriptionDto.  # noqa: E501
+
+
+        :return: The additional_params of this SubscriptionDto.  # noqa: E501
+        :rtype: str
+        """
+        return self._additional_params
+
+    @additional_params.setter
+    def additional_params(self, additional_params):
+        """Sets the additional_params of this SubscriptionDto.
+
+
+        :param additional_params: The additional_params of this SubscriptionDto.  # noqa: E501
+        :type: str
+        """
+
+        self._additional_params = additional_params
 
     @property
     def addresses(self):

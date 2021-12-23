@@ -30,32 +30,42 @@ class DailyDto(object):
     swagger_types = {
         'day': 'int',
         'failed': 'int',
-        'indexed': 'int',
-        'volume': 'int'
+        'ingested_count': 'int',
+        'ingested_volume': 'int',
+        'stored_count': 'int',
+        'stored_volume': 'int'
     }
 
     attribute_map = {
         'day': 'day',
         'failed': 'failed',
-        'indexed': 'indexed',
-        'volume': 'volume'
+        'ingested_count': 'ingestedCount',
+        'ingested_volume': 'ingestedVolume',
+        'stored_count': 'storedCount',
+        'stored_volume': 'storedVolume'
     }
 
-    def __init__(self, day=None, failed=None, indexed=None, volume=None):  # noqa: E501
+    def __init__(self, day=None, failed=None, ingested_count=None, ingested_volume=None, stored_count=None, stored_volume=None):  # noqa: E501
         """DailyDto - a model defined in Swagger"""  # noqa: E501
         self._day = None
         self._failed = None
-        self._indexed = None
-        self._volume = None
+        self._ingested_count = None
+        self._ingested_volume = None
+        self._stored_count = None
+        self._stored_volume = None
         self.discriminator = None
         if day is not None:
             self.day = day
         if failed is not None:
             self.failed = failed
-        if indexed is not None:
-            self.indexed = indexed
-        if volume is not None:
-            self.volume = volume
+        if ingested_count is not None:
+            self.ingested_count = ingested_count
+        if ingested_volume is not None:
+            self.ingested_volume = ingested_volume
+        if stored_count is not None:
+            self.stored_count = stored_count
+        if stored_volume is not None:
+            self.stored_volume = stored_volume
 
     @property
     def day(self):
@@ -100,46 +110,88 @@ class DailyDto(object):
         self._failed = failed
 
     @property
-    def indexed(self):
-        """Gets the indexed of this DailyDto.  # noqa: E501
+    def ingested_count(self):
+        """Gets the ingested_count of this DailyDto.  # noqa: E501
 
 
-        :return: The indexed of this DailyDto.  # noqa: E501
+        :return: The ingested_count of this DailyDto.  # noqa: E501
         :rtype: int
         """
-        return self._indexed
+        return self._ingested_count
 
-    @indexed.setter
-    def indexed(self, indexed):
-        """Sets the indexed of this DailyDto.
+    @ingested_count.setter
+    def ingested_count(self, ingested_count):
+        """Sets the ingested_count of this DailyDto.
 
 
-        :param indexed: The indexed of this DailyDto.  # noqa: E501
+        :param ingested_count: The ingested_count of this DailyDto.  # noqa: E501
         :type: int
         """
 
-        self._indexed = indexed
+        self._ingested_count = ingested_count
 
     @property
-    def volume(self):
-        """Gets the volume of this DailyDto.  # noqa: E501
+    def ingested_volume(self):
+        """Gets the ingested_volume of this DailyDto.  # noqa: E501
 
 
-        :return: The volume of this DailyDto.  # noqa: E501
+        :return: The ingested_volume of this DailyDto.  # noqa: E501
         :rtype: int
         """
-        return self._volume
+        return self._ingested_volume
 
-    @volume.setter
-    def volume(self, volume):
-        """Sets the volume of this DailyDto.
+    @ingested_volume.setter
+    def ingested_volume(self, ingested_volume):
+        """Sets the ingested_volume of this DailyDto.
 
 
-        :param volume: The volume of this DailyDto.  # noqa: E501
+        :param ingested_volume: The ingested_volume of this DailyDto.  # noqa: E501
         :type: int
         """
 
-        self._volume = volume
+        self._ingested_volume = ingested_volume
+
+    @property
+    def stored_count(self):
+        """Gets the stored_count of this DailyDto.  # noqa: E501
+
+
+        :return: The stored_count of this DailyDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._stored_count
+
+    @stored_count.setter
+    def stored_count(self, stored_count):
+        """Sets the stored_count of this DailyDto.
+
+
+        :param stored_count: The stored_count of this DailyDto.  # noqa: E501
+        :type: int
+        """
+
+        self._stored_count = stored_count
+
+    @property
+    def stored_volume(self):
+        """Gets the stored_volume of this DailyDto.  # noqa: E501
+
+
+        :return: The stored_volume of this DailyDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._stored_volume
+
+    @stored_volume.setter
+    def stored_volume(self, stored_volume):
+        """Sets the stored_volume of this DailyDto.
+
+
+        :param stored_volume: The stored_volume of this DailyDto.  # noqa: E501
+        :type: int
+        """
+
+        self._stored_volume = stored_volume
 
     def to_dict(self):
         """Returns the model properties as a dict"""

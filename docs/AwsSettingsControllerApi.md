@@ -7,6 +7,7 @@ All URIs are relative to */*
 | [**update_using_put1**](AwsSettingsControllerApi.md#update_using_put1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
 # **update_using_put1**
+
 > CloudWatchSettingsResponse update_using_put1(body, app_id)
 
 Update App's AWS CloudWatch settings
@@ -14,6 +15,7 @@ Update App's AWS CloudWatch settings
 Applicable only for AWS Apps
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
@@ -57,7 +59,7 @@ except ApiException as e:
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

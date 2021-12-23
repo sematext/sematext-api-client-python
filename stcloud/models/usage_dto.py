@@ -28,49 +28,53 @@ class UsageDto(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'count': 'int',
         'daily_usage': 'list[DailyDto]',
         'daily_volume_mb': 'int',
         'end': 'datetime',
         'failed_count': 'int',
+        'ingested_count': 'int',
+        'ingested_volume': 'int',
         'limit_change_events': 'list[LimitChangeEventDTO]',
         'max_allowed_mb': 'int',
         'max_limit_mb': 'int',
         'start': 'datetime',
-        'volume': 'int',
+        'stored_count': 'int',
+        'stored_volume': 'int',
         'volume_change_events': 'list[LimitChangeEventDTO]'
     }
 
     attribute_map = {
-        'count': 'count',
         'daily_usage': 'dailyUsage',
         'daily_volume_mb': 'dailyVolumeMB',
         'end': 'end',
         'failed_count': 'failedCount',
+        'ingested_count': 'ingestedCount',
+        'ingested_volume': 'ingestedVolume',
         'limit_change_events': 'limitChangeEvents',
         'max_allowed_mb': 'maxAllowedMB',
         'max_limit_mb': 'maxLimitMB',
         'start': 'start',
-        'volume': 'volume',
+        'stored_count': 'storedCount',
+        'stored_volume': 'storedVolume',
         'volume_change_events': 'volumeChangeEvents'
     }
 
-    def __init__(self, count=None, daily_usage=None, daily_volume_mb=None, end=None, failed_count=None, limit_change_events=None, max_allowed_mb=None, max_limit_mb=None, start=None, volume=None, volume_change_events=None):  # noqa: E501
+    def __init__(self, daily_usage=None, daily_volume_mb=None, end=None, failed_count=None, ingested_count=None, ingested_volume=None, limit_change_events=None, max_allowed_mb=None, max_limit_mb=None, start=None, stored_count=None, stored_volume=None, volume_change_events=None):  # noqa: E501
         """UsageDto - a model defined in Swagger"""  # noqa: E501
-        self._count = None
         self._daily_usage = None
         self._daily_volume_mb = None
         self._end = None
         self._failed_count = None
+        self._ingested_count = None
+        self._ingested_volume = None
         self._limit_change_events = None
         self._max_allowed_mb = None
         self._max_limit_mb = None
         self._start = None
-        self._volume = None
+        self._stored_count = None
+        self._stored_volume = None
         self._volume_change_events = None
         self.discriminator = None
-        if count is not None:
-            self.count = count
         if daily_usage is not None:
             self.daily_usage = daily_usage
         if daily_volume_mb is not None:
@@ -79,6 +83,10 @@ class UsageDto(object):
             self.end = end
         if failed_count is not None:
             self.failed_count = failed_count
+        if ingested_count is not None:
+            self.ingested_count = ingested_count
+        if ingested_volume is not None:
+            self.ingested_volume = ingested_volume
         if limit_change_events is not None:
             self.limit_change_events = limit_change_events
         if max_allowed_mb is not None:
@@ -87,31 +95,12 @@ class UsageDto(object):
             self.max_limit_mb = max_limit_mb
         if start is not None:
             self.start = start
-        if volume is not None:
-            self.volume = volume
+        if stored_count is not None:
+            self.stored_count = stored_count
+        if stored_volume is not None:
+            self.stored_volume = stored_volume
         if volume_change_events is not None:
             self.volume_change_events = volume_change_events
-
-    @property
-    def count(self):
-        """Gets the count of this UsageDto.  # noqa: E501
-
-
-        :return: The count of this UsageDto.  # noqa: E501
-        :rtype: int
-        """
-        return self._count
-
-    @count.setter
-    def count(self, count):
-        """Sets the count of this UsageDto.
-
-
-        :param count: The count of this UsageDto.  # noqa: E501
-        :type: int
-        """
-
-        self._count = count
 
     @property
     def daily_usage(self):
@@ -198,6 +187,48 @@ class UsageDto(object):
         self._failed_count = failed_count
 
     @property
+    def ingested_count(self):
+        """Gets the ingested_count of this UsageDto.  # noqa: E501
+
+
+        :return: The ingested_count of this UsageDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._ingested_count
+
+    @ingested_count.setter
+    def ingested_count(self, ingested_count):
+        """Sets the ingested_count of this UsageDto.
+
+
+        :param ingested_count: The ingested_count of this UsageDto.  # noqa: E501
+        :type: int
+        """
+
+        self._ingested_count = ingested_count
+
+    @property
+    def ingested_volume(self):
+        """Gets the ingested_volume of this UsageDto.  # noqa: E501
+
+
+        :return: The ingested_volume of this UsageDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._ingested_volume
+
+    @ingested_volume.setter
+    def ingested_volume(self, ingested_volume):
+        """Sets the ingested_volume of this UsageDto.
+
+
+        :param ingested_volume: The ingested_volume of this UsageDto.  # noqa: E501
+        :type: int
+        """
+
+        self._ingested_volume = ingested_volume
+
+    @property
     def limit_change_events(self):
         """Gets the limit_change_events of this UsageDto.  # noqa: E501
 
@@ -282,25 +313,46 @@ class UsageDto(object):
         self._start = start
 
     @property
-    def volume(self):
-        """Gets the volume of this UsageDto.  # noqa: E501
+    def stored_count(self):
+        """Gets the stored_count of this UsageDto.  # noqa: E501
 
 
-        :return: The volume of this UsageDto.  # noqa: E501
+        :return: The stored_count of this UsageDto.  # noqa: E501
         :rtype: int
         """
-        return self._volume
+        return self._stored_count
 
-    @volume.setter
-    def volume(self, volume):
-        """Sets the volume of this UsageDto.
+    @stored_count.setter
+    def stored_count(self, stored_count):
+        """Sets the stored_count of this UsageDto.
 
 
-        :param volume: The volume of this UsageDto.  # noqa: E501
+        :param stored_count: The stored_count of this UsageDto.  # noqa: E501
         :type: int
         """
 
-        self._volume = volume
+        self._stored_count = stored_count
+
+    @property
+    def stored_volume(self):
+        """Gets the stored_volume of this UsageDto.  # noqa: E501
+
+
+        :return: The stored_volume of this UsageDto.  # noqa: E501
+        :rtype: int
+        """
+        return self._stored_volume
+
+    @stored_volume.setter
+    def stored_volume(self, stored_volume):
+        """Sets the stored_volume of this UsageDto.
+
+
+        :param stored_volume: The stored_volume of this UsageDto.  # noqa: E501
+        :type: int
+        """
+
+        self._stored_volume = stored_volume
 
     @property
     def volume_change_events(self):
