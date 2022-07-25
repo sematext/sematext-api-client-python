@@ -90,6 +90,8 @@ from stcloud.models.subscription_response_entry import SubscriptionResponseEntry
 from stcloud.models.subscriptions_response import SubscriptionsResponse
 from stcloud.models.subscriptions_response_entry import SubscriptionsResponseEntry
 from stcloud.models.tag_names_response import TagNamesResponse
+from stcloud.models.tags_grouped import TagsGrouped
+from stcloud.models.tags_grouped_response import TagsGroupedResponse
 from stcloud.models.token_dto import TokenDto
 from stcloud.models.token_response import TokenResponse
 from stcloud.models.token_response_entry import TokenResponseEntry

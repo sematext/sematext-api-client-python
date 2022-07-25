@@ -32,13 +32,13 @@ class AwsSettingsControllerApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def update_using_put1(self, body, app_id, **kwargs):  # noqa: E501
+    def update_using_put(self, body, app_id, **kwargs):  # noqa: E501
         """Update App's AWS CloudWatch settings  # noqa: E501
 
         Applicable only for AWS Apps  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_using_put1(body, app_id, async_req=True)
+        >>> thread = api.update_using_put(body, app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -50,18 +50,18 @@ class AwsSettingsControllerApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_using_put1_with_http_info(body, app_id, **kwargs)  # noqa: E501
+            return self.update_using_put_with_http_info(body, app_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_using_put1_with_http_info(body, app_id, **kwargs)  # noqa: E501
+            (data) = self.update_using_put_with_http_info(body, app_id, **kwargs)  # noqa: E501
             return data
 
-    def update_using_put1_with_http_info(self, body, app_id, **kwargs):  # noqa: E501
+    def update_using_put_with_http_info(self, body, app_id, **kwargs):  # noqa: E501
         """Update App's AWS CloudWatch settings  # noqa: E501
 
         Applicable only for AWS Apps  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_using_put1_with_http_info(body, app_id, async_req=True)
+        >>> thread = api.update_using_put_with_http_info(body, app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -83,18 +83,18 @@ class AwsSettingsControllerApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_using_put1" % key
+                    " to method update_using_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `update_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `update_using_put`")  # noqa: E501
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `update_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `update_using_put`")  # noqa: E501
 
         collection_formats = {}
 

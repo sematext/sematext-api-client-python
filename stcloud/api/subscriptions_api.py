@@ -137,12 +137,12 @@ class SubscriptionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_for_dash_using_post1(self, body, dash_id, **kwargs):  # noqa: E501
+    def create_for_dash_using_post(self, body, dash_id, **kwargs):  # noqa: E501
         """Create dashboard subscription  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_for_dash_using_post1(body, dash_id, async_req=True)
+        >>> thread = api.create_for_dash_using_post(body, dash_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -154,17 +154,17 @@ class SubscriptionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_for_dash_using_post1_with_http_info(body, dash_id, **kwargs)  # noqa: E501
+            return self.create_for_dash_using_post_with_http_info(body, dash_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_for_dash_using_post1_with_http_info(body, dash_id, **kwargs)  # noqa: E501
+            (data) = self.create_for_dash_using_post_with_http_info(body, dash_id, **kwargs)  # noqa: E501
             return data
 
-    def create_for_dash_using_post1_with_http_info(self, body, dash_id, **kwargs):  # noqa: E501
+    def create_for_dash_using_post_with_http_info(self, body, dash_id, **kwargs):  # noqa: E501
         """Create dashboard subscription  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_for_dash_using_post1_with_http_info(body, dash_id, async_req=True)
+        >>> thread = api.create_for_dash_using_post_with_http_info(body, dash_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -186,18 +186,18 @@ class SubscriptionsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_for_dash_using_post1" % key
+                    " to method create_for_dash_using_post" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `create_for_dash_using_post1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `create_for_dash_using_post`")  # noqa: E501
         # verify the required parameter 'dash_id' is set
         if ('dash_id' not in params or
                 params['dash_id'] is None):
-            raise ValueError("Missing the required parameter `dash_id` when calling `create_for_dash_using_post1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `dash_id` when calling `create_for_dash_using_post`")  # noqa: E501
 
         collection_formats = {}
 
@@ -242,12 +242,12 @@ class SubscriptionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_using_delete2(self, updateable_subscription_id, **kwargs):  # noqa: E501
+    def delete_using_delete3(self, updateable_subscription_id, **kwargs):  # noqa: E501
         """Delete subscription  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_using_delete2(updateable_subscription_id, async_req=True)
+        >>> thread = api.delete_using_delete3(updateable_subscription_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -258,17 +258,17 @@ class SubscriptionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.delete_using_delete2_with_http_info(updateable_subscription_id, **kwargs)  # noqa: E501
+            return self.delete_using_delete3_with_http_info(updateable_subscription_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_using_delete2_with_http_info(updateable_subscription_id, **kwargs)  # noqa: E501
+            (data) = self.delete_using_delete3_with_http_info(updateable_subscription_id, **kwargs)  # noqa: E501
             return data
 
-    def delete_using_delete2_with_http_info(self, updateable_subscription_id, **kwargs):  # noqa: E501
+    def delete_using_delete3_with_http_info(self, updateable_subscription_id, **kwargs):  # noqa: E501
         """Delete subscription  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_using_delete2_with_http_info(updateable_subscription_id, async_req=True)
+        >>> thread = api.delete_using_delete3_with_http_info(updateable_subscription_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -289,14 +289,14 @@ class SubscriptionsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_using_delete2" % key
+                    " to method delete_using_delete3" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'updateable_subscription_id' is set
         if ('updateable_subscription_id' not in params or
                 params['updateable_subscription_id'] is None):
-            raise ValueError("Missing the required parameter `updateable_subscription_id` when calling `delete_using_delete2`")  # noqa: E501
+            raise ValueError("Missing the required parameter `updateable_subscription_id` when calling `delete_using_delete3`")  # noqa: E501
 
         collection_formats = {}
 
@@ -513,12 +513,12 @@ class SubscriptionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def send_app_report_using_post(self, body, app_id, **kwargs):  # noqa: E501
+    def send_app_report_using_post1(self, body, app_id, **kwargs):  # noqa: E501
         """Email an App report  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.send_app_report_using_post(body, app_id, async_req=True)
+        >>> thread = api.send_app_report_using_post1(body, app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -530,17 +530,17 @@ class SubscriptionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.send_app_report_using_post_with_http_info(body, app_id, **kwargs)  # noqa: E501
+            return self.send_app_report_using_post1_with_http_info(body, app_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.send_app_report_using_post_with_http_info(body, app_id, **kwargs)  # noqa: E501
+            (data) = self.send_app_report_using_post1_with_http_info(body, app_id, **kwargs)  # noqa: E501
             return data
 
-    def send_app_report_using_post_with_http_info(self, body, app_id, **kwargs):  # noqa: E501
+    def send_app_report_using_post1_with_http_info(self, body, app_id, **kwargs):  # noqa: E501
         """Email an App report  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.send_app_report_using_post_with_http_info(body, app_id, async_req=True)
+        >>> thread = api.send_app_report_using_post1_with_http_info(body, app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -562,18 +562,18 @@ class SubscriptionsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method send_app_report_using_post" % key
+                    " to method send_app_report_using_post1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `send_app_report_using_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `send_app_report_using_post1`")  # noqa: E501
         # verify the required parameter 'app_id' is set
         if ('app_id' not in params or
                 params['app_id'] is None):
-            raise ValueError("Missing the required parameter `app_id` when calling `send_app_report_using_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `app_id` when calling `send_app_report_using_post1`")  # noqa: E501
 
         collection_formats = {}
 
@@ -723,12 +723,12 @@ class SubscriptionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def toggle_enabled_using_put1(self, body, updateable_subscription_id, **kwargs):  # noqa: E501
+    def toggle_enabled_using_put(self, body, updateable_subscription_id, **kwargs):  # noqa: E501
         """Toggle subscription status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.toggle_enabled_using_put1(body, updateable_subscription_id, async_req=True)
+        >>> thread = api.toggle_enabled_using_put(body, updateable_subscription_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -740,17 +740,17 @@ class SubscriptionsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.toggle_enabled_using_put1_with_http_info(body, updateable_subscription_id, **kwargs)  # noqa: E501
+            return self.toggle_enabled_using_put_with_http_info(body, updateable_subscription_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.toggle_enabled_using_put1_with_http_info(body, updateable_subscription_id, **kwargs)  # noqa: E501
+            (data) = self.toggle_enabled_using_put_with_http_info(body, updateable_subscription_id, **kwargs)  # noqa: E501
             return data
 
-    def toggle_enabled_using_put1_with_http_info(self, body, updateable_subscription_id, **kwargs):  # noqa: E501
+    def toggle_enabled_using_put_with_http_info(self, body, updateable_subscription_id, **kwargs):  # noqa: E501
         """Toggle subscription status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.toggle_enabled_using_put1_with_http_info(body, updateable_subscription_id, async_req=True)
+        >>> thread = api.toggle_enabled_using_put_with_http_info(body, updateable_subscription_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -772,18 +772,18 @@ class SubscriptionsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method toggle_enabled_using_put1" % key
+                    " to method toggle_enabled_using_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `toggle_enabled_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `toggle_enabled_using_put`")  # noqa: E501
         # verify the required parameter 'updateable_subscription_id' is set
         if ('updateable_subscription_id' not in params or
                 params['updateable_subscription_id'] is None):
-            raise ValueError("Missing the required parameter `updateable_subscription_id` when calling `toggle_enabled_using_put1`")  # noqa: E501
+            raise ValueError("Missing the required parameter `updateable_subscription_id` when calling `toggle_enabled_using_put`")  # noqa: E501
 
         collection_formats = {}
 

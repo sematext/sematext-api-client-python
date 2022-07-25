@@ -10,7 +10,7 @@
 from setuptools import setup, find_packages  # mypy: disable=W0611 # noqa:
 
 NAME = "sematext-api-client-python"
-VERSION = "0.4.0"
+VERSION = "0.5.0"
 # To install the library, run the following
 #
 # python setup.py install

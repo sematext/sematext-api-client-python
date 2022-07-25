@@ -35,15 +35,15 @@ class TestAlertsApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_alert_rule_using_delete1(self):
-        """Test case for delete_alert_rule_using_delete1
+    def test_delete_alert_rule_using_delete(self):
+        """Test case for delete_alert_rule_using_delete
 
         Delete alert rule  # noqa: E501
         """
         pass
 
-    def test_disable_alert_rule_using_put(self):
-        """Test case for disable_alert_rule_using_put
+    def test_disable_alert_rule_using_put1(self):
+        """Test case for disable_alert_rule_using_put1
 
         Disable alert rule  # noqa: E501
         """
@@ -56,8 +56,8 @@ class TestAlertsApi(unittest.TestCase):
         """
         pass
 
-    def test_get_alert_rules_for_app_using_get1(self):
-        """Test case for get_alert_rules_for_app_using_get1
+    def test_get_alert_rules_for_app_using_get(self):
+        """Test case for get_alert_rules_for_app_using_get
 
         Get alert rules for an app  # noqa: E501
         """
