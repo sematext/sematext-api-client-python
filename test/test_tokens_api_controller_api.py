@@ -28,8 +28,8 @@ class TestTokensApiControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_app_token1(self):
-        """Test case for create_app_token1
+    def test_create_app_token(self):
+        """Test case for create_app_token
 
         Create new app token  # noqa: E501
         """
@@ -42,8 +42,8 @@ class TestTokensApiControllerApi(unittest.TestCase):
         """
         pass
 
-    def test_get_app_tokens(self):
-        """Test case for get_app_tokens
+    def test_get_app_tokens1(self):
+        """Test case for get_app_tokens1
 
         Get app available tokens  # noqa: E501
         """
@@ -56,8 +56,8 @@ class TestTokensApiControllerApi(unittest.TestCase):
         """
         pass
 
-    def test_update_app_token1(self):
-        """Test case for update_app_token1
+    def test_update_app_token(self):
+        """Test case for update_app_token
 
         Update app token (enable/disable or name)  # noqa: E501
         """

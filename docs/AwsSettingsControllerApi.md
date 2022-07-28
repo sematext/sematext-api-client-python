@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-| Method                                                                 | HTTP request                               | Description                               |
-| ---------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------- |
-| [**update_using_put1**](AwsSettingsControllerApi.md#update_using_put1) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
+| Method                                                               | HTTP request                               | Description                               |
+| -------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------- |
+| [**update_using_put**](AwsSettingsControllerApi.md#update_using_put) | **PUT** /users-web/api/v3/apps/{appId}/aws | Update App&#x27;s AWS CloudWatch settings |
 
-# **update_using_put1**
+# **update_using_put**
 
-> CloudWatchSettingsResponse update_using_put1(body, app_id)
+> CloudWatchSettingsResponse update_using_put(body, app_id)
 
 Update App's AWS CloudWatch settings
 
@@ -36,10 +36,10 @@ app_id = 789 # int | appId
 
 try:
     # Update App's AWS CloudWatch settings
-    api_response = api_instance.update_using_put1(body, app_id)
+    api_response = api_instance.update_using_put(body, app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AwsSettingsControllerApi->update_using_put1: %s\n" % e)
+    print("Exception when calling AwsSettingsControllerApi->update_using_put: %s\n" % e)
 ```
 
 ### Parameters

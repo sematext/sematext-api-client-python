@@ -35,15 +35,15 @@ class TestSubscriptionsApi(unittest.TestCase):
         """
         pass
 
-    def test_create_for_dash_using_post1(self):
-        """Test case for create_for_dash_using_post1
+    def test_create_for_dash_using_post(self):
+        """Test case for create_for_dash_using_post
 
         Create dashboard subscription  # noqa: E501
         """
         pass
 
-    def test_delete_using_delete2(self):
-        """Test case for delete_using_delete2
+    def test_delete_using_delete3(self):
+        """Test case for delete_using_delete3
 
         Delete subscription  # noqa: E501
         """
@@ -63,8 +63,8 @@ class TestSubscriptionsApi(unittest.TestCase):
         """
         pass
 
-    def test_send_app_report_using_post(self):
-        """Test case for send_app_report_using_post
+    def test_send_app_report_using_post1(self):
+        """Test case for send_app_report_using_post1
 
         Email an App report  # noqa: E501
         """
@@ -77,8 +77,8 @@ class TestSubscriptionsApi(unittest.TestCase):
         """
         pass
 
-    def test_toggle_enabled_using_put1(self):
-        """Test case for toggle_enabled_using_put1
+    def test_toggle_enabled_using_put(self):
+        """Test case for toggle_enabled_using_put
 
         Toggle subscription status  # noqa: E501
         """

@@ -28,8 +28,8 @@ class TestAwsSettingsControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_update_using_put1(self):
-        """Test case for update_using_put1
+    def test_update_using_put(self):
+        """Test case for update_using_put
 
         Update App's AWS CloudWatch settings  # noqa: E501
         """

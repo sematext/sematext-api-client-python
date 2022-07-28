@@ -15,24 +15,23 @@ from __future__ import absolute_import
 import unittest
 
 import stcloud
-from stcloud.api.reset_password_api import ResetPasswordApi  # noqa: E501
+from stcloud.models.tags_grouped_response import TagsGroupedResponse  # noqa: E501
 from stcloud.rest import ApiException
 
 
-class TestResetPasswordApi(unittest.TestCase):
-    """ResetPasswordApi unit test stubs"""
+class TestTagsGroupedResponse(unittest.TestCase):
+    """TagsGroupedResponse unit test stubs"""
 
     def setUp(self):
-        self.api = ResetPasswordApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_reset_password_using_post1(self):
-        """Test case for reset_password_using_post1
-
-        Reset Password  # noqa: E501
-        """
+    def testTagsGroupedResponse(self):
+        """Test TagsGroupedResponse"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = stcloud.models.tags_grouped_response.TagsGroupedResponse()  # noqa: E501
         pass
 
 

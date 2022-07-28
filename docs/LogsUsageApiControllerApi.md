@@ -8,7 +8,7 @@ All URIs are relative to */*
 
 # **get_for_range_using_get**
 
-> UsageResponse get_for_range_using_get(app_id,_from, to)
+> UsageResponse get_for_range_using_get(app_id, _from, to)
 
 getForRange
 

@@ -38,6 +38,7 @@
 | **notification_emails**                        | **list[str]**                                                           |             | [optional] |
 | **notification_integrations**                  | [**list[NotificationIntegration]**](NotificationIntegration.md)         |             | [optional] |
 | **notifications_enabled**                      | **bool**                                                                |             | [optional] |
+| **priority**                                   | **str**                                                                 |             | [optional] |
 | **query**                                      | **str**                                                                 |             | [optional] |
 | **report_name**                                | **str**                                                                 |             | [optional] |
 | **rule_key**                                   | **int**                                                                 |             | [optional] |

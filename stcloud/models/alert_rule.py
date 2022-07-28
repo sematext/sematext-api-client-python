@@ -62,6 +62,7 @@ class AlertRule(object):
         'notification_emails': 'list[str]',
         'notification_integrations': 'list[NotificationIntegration]',
         'notifications_enabled': 'bool',
+        'priority': 'str',
         'query': 'str',
         'report_name': 'str',
         'rule_key': 'int',
@@ -113,6 +114,7 @@ class AlertRule(object):
         'notification_emails': 'notificationEmails',
         'notification_integrations': 'notificationIntegrations',
         'notifications_enabled': 'notificationsEnabled',
+        'priority': 'priority',
         'query': 'query',
         'report_name': 'reportName',
         'rule_key': 'ruleKey',
@@ -129,7 +131,7 @@ class AlertRule(object):
         'value_name': 'valueName'
     }
 
-    def __init__(self, account_email=None, allowed_app_types=None, analyzing_time=None, app_display_state=None, app_id=None, app_name=None, app_state=None, app_token=None, app_type=None, back_to_normal_needed=None, chart_key=None, color=None, creator_email=None, default_agg_type=None, description=None, disallowed_app_types=None, enabled=None, estimate_operation=None, estimate_value=None, filter_values=None, filter_values_obj=None, ignore_regular_events_enabled=None, integrations=None, last_data_received_date=None, last_sent=None, last_triggered=None, metadata=None, metric_key=None, metric_label=None, min_delay_between_notifications_in_minutes=None, name=None, notification_emails=None, notification_integrations=None, notifications_enabled=None, query=None, report_name=None, rule_key=None, rule_type=None, runbook=None, saved_query_id=None, schedule=None, sematext_service=None, send_to_email=None, timezone=None, use_only_alert_rule_integrations=None, user_permissions=None, value_column_name=None, value_name=None):  # noqa: E501
+    def __init__(self, account_email=None, allowed_app_types=None, analyzing_time=None, app_display_state=None, app_id=None, app_name=None, app_state=None, app_token=None, app_type=None, back_to_normal_needed=None, chart_key=None, color=None, creator_email=None, default_agg_type=None, description=None, disallowed_app_types=None, enabled=None, estimate_operation=None, estimate_value=None, filter_values=None, filter_values_obj=None, ignore_regular_events_enabled=None, integrations=None, last_data_received_date=None, last_sent=None, last_triggered=None, metadata=None, metric_key=None, metric_label=None, min_delay_between_notifications_in_minutes=None, name=None, notification_emails=None, notification_integrations=None, notifications_enabled=None, priority=None, query=None, report_name=None, rule_key=None, rule_type=None, runbook=None, saved_query_id=None, schedule=None, sematext_service=None, send_to_email=None, timezone=None, use_only_alert_rule_integrations=None, user_permissions=None, value_column_name=None, value_name=None):  # noqa: E501
         """AlertRule - a model defined in Swagger"""  # noqa: E501
         self._account_email = None
         self._allowed_app_types = None
@@ -165,6 +167,7 @@ class AlertRule(object):
         self._notification_emails = None
         self._notification_integrations = None
         self._notifications_enabled = None
+        self._priority = None
         self._query = None
         self._report_name = None
         self._rule_key = None
@@ -248,6 +251,8 @@ class AlertRule(object):
             self.notification_integrations = notification_integrations
         if notifications_enabled is not None:
             self.notifications_enabled = notifications_enabled
+        if priority is not None:
+            self.priority = priority
         if query is not None:
             self.query = query
         if report_name is not None:
@@ -996,6 +1001,33 @@ class AlertRule(object):
         """
 
         self._notifications_enabled = notifications_enabled
+
+    @property
+    def priority(self):
+        """Gets the priority of this AlertRule.  # noqa: E501
+
+
+        :return: The priority of this AlertRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._priority
+
+    @priority.setter
+    def priority(self, priority):
+        """Sets the priority of this AlertRule.
+
+
+        :param priority: The priority of this AlertRule.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["INFO", "ERROR", "WARN", "CRITICAL"]  # noqa: E501
+        if priority not in allowed_values:
+            raise ValueError(
+                "Invalid value for `priority` ({0}), must be one of {1}"  # noqa: E501
+                .format(priority, allowed_values)
+            )
+
+        self._priority = priority
 
     @property
     def query(self):

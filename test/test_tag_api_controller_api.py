@@ -28,15 +28,22 @@ class TestTagApiControllerApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_tag_names_using_get1(self):
-        """Test case for get_tag_names_using_get1
+    def test_get_tag_names_using_get(self):
+        """Test case for get_tag_names_using_get
 
         Gets tag names for the given application identifiers appearing in the given time frame.  # noqa: E501
         """
         pass
 
-    def test_get_using_get2(self):
-        """Test case for get_using_get2
+    def test_get_tags_grouped_by_id_using_get1(self):
+        """Test case for get_tags_grouped_by_id_using_get1
+
+        Gets tag names grouped by application id.  # noqa: E501
+        """
+        pass
+
+    def test_get_using_get(self):
+        """Test case for get_using_get
 
         Gets values for specified tags for the given application identifiers appearing in the given time frame.  # noqa: E501
         """

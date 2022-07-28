@@ -303,12 +303,12 @@ class AppsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def invite_app_guests_using_post(self, body, **kwargs):  # noqa: E501
+    def invite_app_guests_using_post1(self, body, **kwargs):  # noqa: E501
         """Invite guests to an app  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.invite_app_guests_using_post(body, async_req=True)
+        >>> thread = api.invite_app_guests_using_post1(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -319,17 +319,17 @@ class AppsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.invite_app_guests_using_post_with_http_info(body, **kwargs)  # noqa: E501
+            return self.invite_app_guests_using_post1_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.invite_app_guests_using_post_with_http_info(body, **kwargs)  # noqa: E501
+            (data) = self.invite_app_guests_using_post1_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def invite_app_guests_using_post_with_http_info(self, body, **kwargs):  # noqa: E501
+    def invite_app_guests_using_post1_with_http_info(self, body, **kwargs):  # noqa: E501
         """Invite guests to an app  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.invite_app_guests_using_post_with_http_info(body, async_req=True)
+        >>> thread = api.invite_app_guests_using_post1_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -350,14 +350,14 @@ class AppsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method invite_app_guests_using_post" % key
+                    " to method invite_app_guests_using_post1" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `invite_app_guests_using_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `invite_app_guests_using_post1`")  # noqa: E501
 
         collection_formats = {}
 
@@ -400,12 +400,12 @@ class AppsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def list_apps_users_using_get(self, **kwargs):  # noqa: E501
+    def list_apps_users_using_get1(self, **kwargs):  # noqa: E501
         """Get all users of apps accessible to this account  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_apps_users_using_get(async_req=True)
+        >>> thread = api.list_apps_users_using_get1(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -415,17 +415,17 @@ class AppsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.list_apps_users_using_get_with_http_info(**kwargs)  # noqa: E501
+            return self.list_apps_users_using_get1_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.list_apps_users_using_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.list_apps_users_using_get1_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def list_apps_users_using_get_with_http_info(self, **kwargs):  # noqa: E501
+    def list_apps_users_using_get1_with_http_info(self, **kwargs):  # noqa: E501
         """Get all users of apps accessible to this account  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.list_apps_users_using_get_with_http_info(async_req=True)
+        >>> thread = api.list_apps_users_using_get1_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -445,7 +445,7 @@ class AppsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method list_apps_users_using_get" % key
+                    " to method list_apps_users_using_get1" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -673,13 +673,13 @@ class AppsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_using_put2(self, body, any_state_app_id, **kwargs):  # noqa: E501
+    def update_using_put3(self, body, any_state_app_id, **kwargs):  # noqa: E501
         """Update app  # noqa: E501
 
         App can be in any state  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_using_put2(body, any_state_app_id, async_req=True)
+        >>> thread = api.update_using_put3(body, any_state_app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -691,18 +691,18 @@ class AppsApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_using_put2_with_http_info(body, any_state_app_id, **kwargs)  # noqa: E501
+            return self.update_using_put3_with_http_info(body, any_state_app_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_using_put2_with_http_info(body, any_state_app_id, **kwargs)  # noqa: E501
+            (data) = self.update_using_put3_with_http_info(body, any_state_app_id, **kwargs)  # noqa: E501
             return data
 
-    def update_using_put2_with_http_info(self, body, any_state_app_id, **kwargs):  # noqa: E501
+    def update_using_put3_with_http_info(self, body, any_state_app_id, **kwargs):  # noqa: E501
         """Update app  # noqa: E501
 
         App can be in any state  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_using_put2_with_http_info(body, any_state_app_id, async_req=True)
+        >>> thread = api.update_using_put3_with_http_info(body, any_state_app_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -724,18 +724,18 @@ class AppsApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_using_put2" % key
+                    " to method update_using_put3" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
-            raise ValueError("Missing the required parameter `body` when calling `update_using_put2`")  # noqa: E501
+            raise ValueError("Missing the required parameter `body` when calling `update_using_put3`")  # noqa: E501
         # verify the required parameter 'any_state_app_id' is set
         if ('any_state_app_id' not in params or
                 params['any_state_app_id'] is None):
-            raise ValueError("Missing the required parameter `any_state_app_id` when calling `update_using_put2`")  # noqa: E501
+            raise ValueError("Missing the required parameter `any_state_app_id` when calling `update_using_put3`")  # noqa: E501
 
         collection_formats = {}
 

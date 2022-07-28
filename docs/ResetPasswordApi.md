@@ -2,13 +2,13 @@
 
 All URIs are relative to */*
 
-| Method                                                                         | HTTP request                                      | Description    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------- | -------------- |
-| [**reset_password_using_post**](ResetPasswordApi.md#reset_password_using_post) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
+| Method                                                                           | HTTP request                                      | Description    |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- | -------------- |
+| [**reset_password_using_post1**](ResetPasswordApi.md#reset_password_using_post1) | **POST** /users-web/api/v3/account/password/reset | Reset Password |
 
-# **reset_password_using_post**
+# **reset_password_using_post1**
 
-> GenericMapBasedApiResponse reset_password_using_post(body)
+> GenericMapBasedApiResponse reset_password_using_post1(body)
 
 Reset Password
 
@@ -33,10 +33,10 @@ body = stcloud.UserInfo() # UserInfo | dto
 
 try:
     # Reset Password
-    api_response = api_instance.reset_password_using_post(body)
+    api_response = api_instance.reset_password_using_post1(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ResetPasswordApi->reset_password_using_post: %s\n" % e)
+    print("Exception when calling ResetPasswordApi->reset_password_using_post1: %s\n" % e)
 ```
 
 ### Parameters

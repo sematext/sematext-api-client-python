@@ -4,15 +4,15 @@ All URIs are relative to */*
 
 | Method                                                                       | HTTP request                                                        | Description                               |
 | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------------------------------- |
-| [**create_app_token1**](TokensApiControllerApi.md#create_app_token1)         | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
+| [**create_app_token**](TokensApiControllerApi.md#create_app_token)           | **POST** /users-web/api/v3/apps/{appId}/tokens                      | Create new app token                      |
 | [**delete_app_token1**](TokensApiControllerApi.md#delete_app_token1)         | **DELETE** /users-web/api/v3/apps/{appId}/tokens/{tokenId}          | Delete app token                          |
-| [**get_app_tokens**](TokensApiControllerApi.md#get_app_tokens)               | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
+| [**get_app_tokens1**](TokensApiControllerApi.md#get_app_tokens1)             | **GET** /users-web/api/v3/apps/{appId}/tokens                       | Get app available tokens                  |
 | [**regenerate_app_token1**](TokensApiControllerApi.md#regenerate_app_token1) | **POST** /users-web/api/v3/apps/{appId}/tokens/{tokenId}/regenerate | Regenerate app token)                     |
-| [**update_app_token1**](TokensApiControllerApi.md#update_app_token1)         | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
+| [**update_app_token**](TokensApiControllerApi.md#update_app_token)           | **PUT** /users-web/api/v3/apps/{appId}/tokens/{tokenId}             | Update app token (enable/disable or name) |
 
-# **create_app_token1**
+# **create_app_token**
 
-> TokenResponse create_app_token1(body, app_id)
+> TokenResponse create_app_token(body, app_id)
 
 Create new app token
 
@@ -38,10 +38,10 @@ app_id = 789 # int | appId
 
 try:
     # Create new app token
-    api_response = api_instance.create_app_token1(body, app_id)
+    api_response = api_instance.create_app_token(body, app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TokensApiControllerApi->create_app_token1: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->create_app_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -122,9 +122,9 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_app_tokens**
+# **get_app_tokens1**
 
-> TokensResponse get_app_tokens(app_id)
+> TokensResponse get_app_tokens1(app_id)
 
 Get app available tokens
 
@@ -149,10 +149,10 @@ app_id = 789 # int | appId
 
 try:
     # Get app available tokens
-    api_response = api_instance.get_app_tokens(app_id)
+    api_response = api_instance.get_app_tokens1(app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TokensApiControllerApi->get_app_tokens: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->get_app_tokens1: %s\n" % e)
 ```
 
 ### Parameters
@@ -232,9 +232,9 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_app_token1**
+# **update_app_token**
 
-> TokenResponse update_app_token1(body, app_id, token_id)
+> TokenResponse update_app_token(body, app_id, token_id)
 
 Update app token (enable/disable or name)
 
@@ -261,10 +261,10 @@ token_id = 789 # int | tokenId
 
 try:
     # Update app token (enable/disable or name)
-    api_response = api_instance.update_app_token1(body, app_id, token_id)
+    api_response = api_instance.update_app_token(body, app_id, token_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling TokensApiControllerApi->update_app_token1: %s\n" % e)
+    print("Exception when calling TokensApiControllerApi->update_app_token: %s\n" % e)
 ```
 
 ### Parameters

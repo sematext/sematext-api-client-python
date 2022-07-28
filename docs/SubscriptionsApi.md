@@ -5,13 +5,13 @@ All URIs are relative to */*
 | Method                                                                             | HTTP request                                                          | Description                              |
 | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ---------------------------------------- |
 | [**create_for_app_using_post**](SubscriptionsApi.md#create_for_app_using_post)     | **POST** /users-web/api/v3/apps/{appId}/subscription                  | Create App subscription                  |
-| [**create_for_dash_using_post1**](SubscriptionsApi.md#create_for_dash_using_post1) | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
-| [**delete_using_delete2**](SubscriptionsApi.md#delete_using_delete2)               | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
+| [**create_for_dash_using_post**](SubscriptionsApi.md#create_for_dash_using_post)   | **POST** /users-web/api/v3/dashboards/{dashId}/subscription           | Create dashboard subscription            |
+| [**delete_using_delete3**](SubscriptionsApi.md#delete_using_delete3)               | **DELETE** /users-web/api/v3/subscriptions/{updateableSubscriptionId} | Delete subscription                      |
 | [**list_using_get3**](SubscriptionsApi.md#list_using_get3)                         | **GET** /users-web/api/v3/apps/{appId}/subscriptions                  | Get subscriptions for an App             |
 | [**list_using_get5**](SubscriptionsApi.md#list_using_get5)                         | **GET** /users-web/api/v3/subscriptions                               | Get current account&#x27;s subscriptions |
-| [**send_app_report_using_post**](SubscriptionsApi.md#send_app_report_using_post)   | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
+| [**send_app_report_using_post1**](SubscriptionsApi.md#send_app_report_using_post1) | **POST** /users-web/api/v3/apps/{appId}/report/send                   | Email an App report                      |
 | [**send_dash_report_using_post**](SubscriptionsApi.md#send_dash_report_using_post) | **POST** /users-web/api/v3/dashboards/{dashId}/report/send            | Email a dashboard report                 |
-| [**toggle_enabled_using_put1**](SubscriptionsApi.md#toggle_enabled_using_put1)     | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
+| [**toggle_enabled_using_put**](SubscriptionsApi.md#toggle_enabled_using_put)       | **PUT** /users-web/api/v3/subscriptions/{updateableSubscriptionId}    | Toggle subscription status               |
 | [**update_for_app_using_put**](SubscriptionsApi.md#update_for_app_using_put)       | **PUT** /users-web/api/v3/apps/{appId}/subscription                   | Update App subscription                  |
 | [**update_for_dash_using_put1**](SubscriptionsApi.md#update_for_dash_using_put1)   | **PUT** /users-web/api/v3/dashboards/{dashId}/subscription            | Update dashboard subscription            |
 
@@ -71,9 +71,9 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_for_dash_using_post1**
+# **create_for_dash_using_post**
 
-> SubscriptionResponse create_for_dash_using_post1(body, dash_id)
+> SubscriptionResponse create_for_dash_using_post(body, dash_id)
 
 Create dashboard subscription
 
@@ -99,10 +99,10 @@ dash_id = 789 # int | dashId
 
 try:
     # Create dashboard subscription
-    api_response = api_instance.create_for_dash_using_post1(body, dash_id)
+    api_response = api_instance.create_for_dash_using_post(body, dash_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SubscriptionsApi->create_for_dash_using_post1: %s\n" % e)
+    print("Exception when calling SubscriptionsApi->create_for_dash_using_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -127,9 +127,9 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_using_delete2**
+# **delete_using_delete3**
 
-> GenericMapBasedApiResponse delete_using_delete2(updateable_subscription_id)
+> GenericMapBasedApiResponse delete_using_delete3(updateable_subscription_id)
 
 Delete subscription
 
@@ -154,10 +154,10 @@ updateable_subscription_id = 789 # int | updateableSubscriptionId
 
 try:
     # Delete subscription
-    api_response = api_instance.delete_using_delete2(updateable_subscription_id)
+    api_response = api_instance.delete_using_delete3(updateable_subscription_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SubscriptionsApi->delete_using_delete2: %s\n" % e)
+    print("Exception when calling SubscriptionsApi->delete_using_delete3: %s\n" % e)
 ```
 
 ### Parameters
@@ -286,9 +286,9 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **send_app_report_using_post**
+# **send_app_report_using_post1**
 
-> MailReportResponse send_app_report_using_post(body, app_id)
+> MailReportResponse send_app_report_using_post1(body, app_id)
 
 Email an App report
 
@@ -314,10 +314,10 @@ app_id = 789 # int | appId
 
 try:
     # Email an App report
-    api_response = api_instance.send_app_report_using_post(body, app_id)
+    api_response = api_instance.send_app_report_using_post1(body, app_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SubscriptionsApi->send_app_report_using_post: %s\n" % e)
+    print("Exception when calling SubscriptionsApi->send_app_report_using_post1: %s\n" % e)
 ```
 
 ### Parameters
@@ -398,9 +398,9 @@ except ApiException as e:
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **toggle_enabled_using_put1**
+# **toggle_enabled_using_put**
 
-> SubscriptionResponse toggle_enabled_using_put1(body, updateable_subscription_id)
+> SubscriptionResponse toggle_enabled_using_put(body, updateable_subscription_id)
 
 Toggle subscription status
 
@@ -426,10 +426,10 @@ updateable_subscription_id = 789 # int | updateableSubscriptionId
 
 try:
     # Toggle subscription status
-    api_response = api_instance.toggle_enabled_using_put1(body, updateable_subscription_id)
+    api_response = api_instance.toggle_enabled_using_put(body, updateable_subscription_id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling SubscriptionsApi->toggle_enabled_using_put1: %s\n" % e)
+    print("Exception when calling SubscriptionsApi->toggle_enabled_using_put: %s\n" % e)
 ```
 
 ### Parameters

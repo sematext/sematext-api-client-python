@@ -49,15 +49,15 @@ class TestAppsApi(unittest.TestCase):
         """
         pass
 
-    def test_invite_app_guests_using_post(self):
-        """Test case for invite_app_guests_using_post
+    def test_invite_app_guests_using_post1(self):
+        """Test case for invite_app_guests_using_post1
 
         Invite guests to an app  # noqa: E501
         """
         pass
 
-    def test_list_apps_users_using_get(self):
-        """Test case for list_apps_users_using_get
+    def test_list_apps_users_using_get1(self):
+        """Test case for list_apps_users_using_get1
 
         Get all users of apps accessible to this account  # noqa: E501
         """
@@ -77,8 +77,8 @@ class TestAppsApi(unittest.TestCase):
         """
         pass
 
-    def test_update_using_put2(self):
-        """Test case for update_using_put2
+    def test_update_using_put3(self):
+        """Test case for update_using_put3
 
         Update app  # noqa: E501
         """
